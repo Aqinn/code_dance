@@ -6,7 +6,7 @@ import java.util.Stack;
  * @Author Aqinn
  * @Date 2021/1/21 2:58 下午
  */
-public class No30_包含min函数的栈 {
+public class 包含min函数的栈 {
 
     /**
      * 题目描述:

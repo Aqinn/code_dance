@@ -7,7 +7,7 @@ import java.util.List;
  * @Author Aqinn
  * @Date 2021/1/21 2:09 下午
  */
-public class No29_顺时针打印矩阵 {
+public class 顺时针打印矩阵 {
 
     // cost time => 28:14
 

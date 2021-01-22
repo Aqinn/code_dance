@@ -7,7 +7,7 @@ import java.util.List;
  * @Author Aqinn
  * @Date 2021/1/21 3:35 下午
  */
-public class No40_最小的K个数 {
+public class 最小的K个数 {
 
     /**
      * 题目描述:

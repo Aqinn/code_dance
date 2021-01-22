@@ -4,7 +4,7 @@ package 牛客网.数组与矩阵;
  * @Author Aqinn
  * @Date 2021/1/21 2:40 下午
  */
-public class No50_第一个只出现一次的字符位置 {
+public class 第一个只出现一次的字符位置 {
 
     // cost time => 3:41
 

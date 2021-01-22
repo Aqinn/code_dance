@@ -4,7 +4,7 @@ package 牛客网.栈队列堆;
  * @Author Aqinn
  * @Date 2021/1/21 4:09 下午
  */
-public class No41_2_字符流中第一个不重复的字符 {
+public class 字符流中第一个不重复的字符 {
 
     /**
      * 题目描述:
@@ -14,7 +14,7 @@ public class No41_2_字符流中第一个不重复的字符 {
      */
 
     public static void main(String[] args) {
-        No41_2_字符流中第一个不重复的字符 main = new No41_2_字符流中第一个不重复的字符();
+        字符流中第一个不重复的字符 main = new 字符流中第一个不重复的字符();
         main.Insert('g');
         main.Insert('o');
         System.out.println(main.FirstAppearingOnce());

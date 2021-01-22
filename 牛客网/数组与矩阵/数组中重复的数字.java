@@ -6,7 +6,7 @@ import java.util.Date;
  * @Author Aqinn
  * @Date 2021/1/18 4:04 下午
  */
-public class No3_数组中重复的数字 {
+public class 数组中重复的数字 {
 
     /**
      * 题目描述:

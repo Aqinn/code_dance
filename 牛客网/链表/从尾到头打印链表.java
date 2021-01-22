@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @Author Aqinn
  * @Date 2021/1/21 6:13 下午
  */
-public class No6_从尾到头打印链表 {
+public class 从尾到头打印链表 {
 
     // cost time => 14:21
 
@@ -16,7 +16,7 @@ public class No6_从尾到头打印链表 {
      */
 
     public static void main(String[] args) {
-        No6_从尾到头打印链表 main = new No6_从尾到头打印链表();
+        从尾到头打印链表 main = new 从尾到头打印链表();
         ListNode root = new ListNode(1, null);
         root.next = new ListNode(2, null);
         root.next.next = new ListNode(3, null);

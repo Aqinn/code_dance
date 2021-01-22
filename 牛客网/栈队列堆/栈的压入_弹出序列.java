@@ -6,7 +6,7 @@ import java.util.Stack;
  * @Author Aqinn
  * @Date 2021/1/21 3:14 下午
  */
-public class No31_栈的压入_弹出序列 {
+public class 栈的压入_弹出序列 {
 
     // cost time => 11:34
 

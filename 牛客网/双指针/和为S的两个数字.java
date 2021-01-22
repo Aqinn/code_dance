@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @Author Aqinn
  * @Date 2021/1/21 4:54 下午
  */
-public class No57_1_和为S的两个数字 {
+public class 和为S的两个数字 {
 
     // cost time => 16:16
 
@@ -16,7 +16,7 @@ public class No57_1_和为S的两个数字 {
      */
 
     public static void main(String[] args) {
-        No57_1_和为S的两个数字 main = new No57_1_和为S的两个数字();
+        和为S的两个数字 main = new 和为S的两个数字();
         int[] arr = new int[]{1, 2, 4, 7, 11, 15};
         for (Integer i : main.FindNumbersWithSum(arr, 15)) {
             System.out.print(i + " ");

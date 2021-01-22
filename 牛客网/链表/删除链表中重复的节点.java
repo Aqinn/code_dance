@@ -4,7 +4,7 @@ package 牛客网.链表;
  * @Author Aqinn
  * @Date 2021/1/21 6:47 下午
  */
-public class No18_2_删除链表中重复的节点 {
+public class 删除链表中重复的节点 {
 
     // cost time => 56:31
 
@@ -17,28 +17,28 @@ public class No18_2_删除链表中重复的节点 {
 
     public static class ListNode {
         int val;
-        No18_2_删除链表中重复的节点.ListNode next = null;
+        删除链表中重复的节点.ListNode next = null;
 
         ListNode(int val) {
             this.val = val;
         }
 
-        public ListNode(int val, No18_2_删除链表中重复的节点.ListNode next) {
+        public ListNode(int val, 删除链表中重复的节点.ListNode next) {
             this.val = val;
             this.next = next;
         }
     }
 
     public static void main(String[] args) {
-        No18_2_删除链表中重复的节点 main = new No18_2_删除链表中重复的节点();
-        No18_2_删除链表中重复的节点.ListNode root = new No18_2_删除链表中重复的节点.ListNode(1, null);
+        删除链表中重复的节点 main = new 删除链表中重复的节点();
+        删除链表中重复的节点.ListNode root = new 删除链表中重复的节点.ListNode(1, null);
         ListNode temp = root;
-        root.next = new No18_2_删除链表中重复的节点.ListNode(2, null);
-        root.next.next = new No18_2_删除链表中重复的节点.ListNode(3, null);
-        root.next.next.next = new No18_2_删除链表中重复的节点.ListNode(3, null);
-        root.next.next.next.next = new No18_2_删除链表中重复的节点.ListNode(4, null);
-        root.next.next.next.next.next = new No18_2_删除链表中重复的节点.ListNode(4, null);
-        root.next.next.next.next.next.next = new No18_2_删除链表中重复的节点.ListNode(5, null);
+        root.next = new 删除链表中重复的节点.ListNode(2, null);
+        root.next.next = new 删除链表中重复的节点.ListNode(3, null);
+        root.next.next.next = new 删除链表中重复的节点.ListNode(3, null);
+        root.next.next.next.next = new 删除链表中重复的节点.ListNode(4, null);
+        root.next.next.next.next.next = new 删除链表中重复的节点.ListNode(4, null);
+        root.next.next.next.next.next.next = new 删除链表中重复的节点.ListNode(5, null);
         while (temp.next != null){
             System.out.print(temp.val + " ");
             temp = temp.next;

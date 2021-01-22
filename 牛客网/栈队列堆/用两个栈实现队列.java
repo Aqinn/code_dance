@@ -6,7 +6,7 @@ import java.util.Stack;
  * @Author Aqinn
  * @Date 2021/1/21 2:47 下午
  */
-public class No9_用两个栈实现队列 {
+public class 用两个栈实现队列 {
 
     // cost time => 6:26
 

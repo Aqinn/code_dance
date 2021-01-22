@@ -4,7 +4,7 @@ package 牛客网.数组与矩阵;
  * @Author Aqinn
  * @Date 2021/1/21 1:53 下午
  */
-public class No5_替换空格 {
+public class 替换空格 {
 
     /**
      * 题目描述:

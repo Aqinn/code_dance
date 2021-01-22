@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @Author Aqinn
  * @Date 2021/1/21 4:54 下午
  */
-public class No57_2_和为S的连续正数序列 {
+public class 和为S的连续正数序列 {
 
     // cost time => 10:13
 
@@ -19,7 +19,7 @@ public class No57_2_和为S的连续正数序列 {
      */
 
     public static void main(String[] args) {
-        No57_2_和为S的连续正数序列 main = new No57_2_和为S的连续正数序列();
+        和为S的连续正数序列 main = new 和为S的连续正数序列();
         for (ArrayList<Integer> list : main.FindContinuousSequence(9)) {
             for (Integer i : list) {
                 System.out.print(i + " ");

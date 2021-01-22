@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
  * @Author Aqinn
  * @Date 2021/1/21 4:15 下午
  */
-public class No59_滑动窗口的最大值 {
+public class 滑动窗口的最大值 {
 
     // cost time => 33:53
 
@@ -20,7 +20,7 @@ public class No59_滑动窗口的最大值 {
      */
 
     public static void main(String[] args) {
-        No59_滑动窗口的最大值 main = new No59_滑动窗口的最大值();
+        滑动窗口的最大值 main = new 滑动窗口的最大值();
         int[] arr = new int[]{2, 3, 4, 2, 6, 2, 5, 1};
         for (Integer i : main.maxInWindows(arr, 3)) {
             System.out.print(i + " ");

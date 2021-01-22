@@ -4,7 +4,7 @@ package 牛客网.双指针;
  * @Author Aqinn
  * @Date 2021/1/21 5:54 下午
  */
-public class No58_2_左旋转字符串 {
+public class 左旋转字符串 {
 
     /**
      * 题目描述:
@@ -12,7 +12,7 @@ public class No58_2_左旋转字符串 {
      */
 
     public static void main(String[] args) {
-        No58_2_左旋转字符串 main = new No58_2_左旋转字符串();
+        左旋转字符串 main = new 左旋转字符串();
         String reverse = main.LeftRotateString("abcdefg", 7);
         System.out.println(reverse);
     }

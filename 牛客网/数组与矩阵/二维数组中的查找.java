@@ -4,7 +4,7 @@ package 牛客网.数组与矩阵;
  * @Author Aqinn
  * @Date 2021/1/21 1:32 下午
  */
-public class No4_二维数组中的查找 {
+public class 二维数组中的查找 {
 
     /**
      * 题目描述:

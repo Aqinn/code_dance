@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @Author Aqinn
  * @Date 2021/1/21 3:53 下午
  */
-public class No41_1_数据流中的中位数 {
+public class 数据流中的中位数 {
 
     // cost time => 11:41
 
@@ -18,7 +18,7 @@ public class No41_1_数据流中的中位数 {
      */
 
     public static void main(String[] args) {
-        No41_1_数据流中的中位数 main = new No41_1_数据流中的中位数();
+        数据流中的中位数 main = new 数据流中的中位数();
         main.Insert(3);
         System.out.println(main.GetMedian());
         main.Insert(6);

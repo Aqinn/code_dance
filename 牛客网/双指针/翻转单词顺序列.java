@@ -4,7 +4,7 @@ package 牛客网.双指针;
  * @Author Aqinn
  * @Date 2021/1/21 5:26 下午
  */
-public class No58_1_翻转单词顺序列 {
+public class 翻转单词顺序列 {
 
     // cost time => 25:38
 
@@ -18,7 +18,7 @@ public class No58_1_翻转单词顺序列 {
      */
 
     public static void main(String[] args) {
-        No58_1_翻转单词顺序列 main = new No58_1_翻转单词顺序列();
+        翻转单词顺序列 main = new 翻转单词顺序列();
         System.out.println(main.ReverseSentence(""));
     }
 
