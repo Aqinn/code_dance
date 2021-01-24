@@ -16,14 +16,14 @@ public class 矩阵中的路径 {
     public static void main(String[] args) {
         矩阵中的路径 main = new 矩阵中的路径();
         char[] matrix = "ABCESFCSADEE".toCharArray();
-        System.out.println(main.hasPath(matrix, 3, 4, "ABFD".toCharArray()));
+        System.out.println(main.hasPath(matrix, 3, 4, "ABCCC".toCharArray()));
     }
 
     public boolean hasPath(char[] matrix, int rows, int cols, char[] str) {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 int[] been = new int[rows * cols + 1];
-                if (match(matrix, rows, cols, i, j, str, 0, str.length - 1, been)) {
+                if (match(matrix, rows, cols, i, j, str, 0, been)) {
                     return true;
                 }
             }
@@ -41,42 +41,41 @@ public class 矩阵中的路径 {
         System.out.println();
     }
 
-    private boolean match(char[] matrix, int rows, int cols, int row, int col, char[] str, int begin, int end, int[] been) {
-        showMatrix(been, rows, cols);
+    private boolean match(char[] matrix, int rows, int cols, int row, int col, char[] str, int begin, int[] been) {
+//        showMatrix(been, rows, cols);
         if (matrix[row * cols + col] == str[begin]) {
             // 是否全部匹配成功？
-            if (begin == end)
+            if (begin == str.length - 1)
                 return true;
             // 如果匹配上了，那就看看上下左右的匹不匹配剩下的字符
             been[row * cols + col] = 1;
             boolean left = false, right = false, up = false, down = false;
             // 左
-            if (col - 1 >= 0) {
-                left = match(matrix, rows, cols, row, col - 1, str, begin + 1, end, been);
+            if (col - 1 >= 0 && been[row * cols + (col - 1)] != 1) {
+                left = match(matrix, rows, cols, row, col - 1, str, begin + 1, been);
                 if (left)
                     return true;
             }
             // 右
-            if (col + 1 < cols) {
-                right = match(matrix, rows, cols, row, col + 1, str, begin + 1, end, been);
+            if (col + 1 < cols && been[row * cols + (col + 1)] != 1) {
+                right = match(matrix, rows, cols, row, col + 1, str, begin + 1, been);
                 if (right)
                     return true;
             }
             // 上
-            if (row - 1 >= 0) {
-                up = match(matrix, rows, cols, row - 1, col, str, begin + 1, end, been);
+            if (row - 1 >= 0 && been[(row - 1) * cols + col] != 1) {
+                up = match(matrix, rows, cols, row - 1, col, str, begin + 1, been);
                 if (up)
                     return true;
             }
             // 下
-            if (row + 1 < rows) {
-                down = match(matrix, rows, cols, row + 1, col, str, begin + 1, end, been);
+            if (row + 1 < rows && been[(row + 1) * cols + col] != 1) {
+                down = match(matrix, rows, cols, row + 1, col, str, begin + 1, been);
                 if (down)
                     return true;
             }
             // 如果上下左右都不匹配，证明这条路白走
-            if (!left && !right && !up && !down)
-                been[row * cols + col] = 0;
+            been[row * cols + col] = 0;
             return false;
         } else {
             return false;
