@@ -37,8 +37,8 @@ public class 归并排序 extends Base {
         // 左右两个序列各拿指针位置的数出来，比较大小，小的先放到 temp 里 + 挪动该序列的指针，大的继续与另一序列的下一个数比对
         while (i <= mid || j <= right) {
             // 情况 1: 如果 j > right 却进了循环，那只能说明 i 序列剩下的一股脑丢过去就好了
-            // 情况 2: 如果 i 序列的指针未到底部 且 i序列指针 小于 j序列指针
-            if (j > right || (i <= mid && arr[i] < arr[j])) {
+            // 情况 2: 短路运算至此且循环仍能继续说明i还没越界 则当 i序列指针 小于 j序列指针
+            if (j > right || arr[i] < arr[j]) {
                 temp[idx++] = arr[i++];
                 continue;
             }
