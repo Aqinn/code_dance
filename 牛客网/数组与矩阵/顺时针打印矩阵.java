@@ -41,14 +41,17 @@ public class 顺时针打印矩阵 {
                 {9,10,11,12},
                 {13,14,15,16}
         };
-        printMatrix(arr3);
-        List<Integer> list = getMatrixArray(arr3);
+        int[][] arr4 = new int[][]{
+                {1,2,3,4}
+        };
+        error_printMatrix(arr4);
+        List<Integer> list = getMatrixArray(arr4);
         for (Integer i:list) {
             System.out.print(i + " ");
         }
     }
 
-    private static void printMatrix(int[][] matrix) {
+    private static void error_printMatrix(int[][] matrix) {
         int hb = 0, he = matrix[0].length - 1, wb = 0, we = matrix.length - 1;
         while (hb <= he && wb <= we) {
             // 打印上侧

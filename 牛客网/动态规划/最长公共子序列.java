@@ -27,7 +27,7 @@ public class 最长公共子序列 {
                 }
             }
         }
-        if (dp[s1.length()-1][s2.length()-1] == 0)
+        if (dp[s1.length()][s2.length()] == 0)
             return "-1";
         StringBuilder sb = new StringBuilder();
         int i=s1.length(), j=s2.length();
