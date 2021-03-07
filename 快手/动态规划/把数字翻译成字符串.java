@@ -33,39 +33,34 @@ public class 把数字翻译成字符串 {
         return dp[nums.length() - 1];
     }
 
-    // 待完善
     public int _solve(String nums) {
         int len;
-        if (nums == null || (len = nums.length()) == 0)
+        if (nums == null || (len = nums.length()) == 0 || nums.charAt(0) == '0')
             return 0;
         if (len == 1)
             return 1;
-        int[] dp = new int[len + 2];
+        int[] dp = new int[len];
         dp[0] = 1;
         // 长度肯定大于等于2
-        if (low2(nums.charAt(0)) && low6(nums.charAt(1))) {
-            dp[1] = 2;
-        } else {
-            dp[1] = 1;
-        }
-        for (int i = 2; i < len; i++) {
+        for (int i = 1; i < len; i++) {
             char ch1 = nums.charAt(i - 1);
             char ch2 = nums.charAt(i);
-            if (low2(ch1) && low6(ch2)) {
-                dp[i] = dp[i - 1] + dp[i - 2] + 2;
-            } else {
-                dp[i] = dp[i - 1] + dp[i - 2] + 1;
+            if (ch2 != '0')
+                dp[i] = dp[i - 1];
+            if (is26(ch1, ch2)) {
+                if (i == 1)
+                    dp[i]++;
+                else
+                    dp[i] += dp[i - 2];
             }
         }
+        // System.out.println(Arrays.toString(dp));
         return dp[len - 1];
     }
 
-    private boolean low2(char c) {
-        return '0' <= c && c <= '2';
-    }
-
-    private boolean low6(char c) {
-        return '0' <= c && c <= '6';
+    private boolean is26(char ch1, char ch2) {
+        int x = (ch1 - '0') * 10 + (ch2 - '0');
+        return 10 <= x && x <= 26;
     }
 
 }
