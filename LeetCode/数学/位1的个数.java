@@ -1,4 +1,4 @@
-package 字节跳动;
+package LeetCode.数学;
 
 /**
  * @Author Aqinn
