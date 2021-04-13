@@ -1,4 +1,4 @@
-package LeetCode.无法归类;
+package LeetCode.字符串;
 
 import java.util.HashMap;
 import java.util.Map;

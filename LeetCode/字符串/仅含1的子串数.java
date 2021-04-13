@@ -1,6 +1,4 @@
-package LeetCode.无法归类;
-
-import java.util.*;
+package LeetCode.字符串;
 
 /**
  * @Author Aqinn
