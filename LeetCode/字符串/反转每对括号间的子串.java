@@ -30,8 +30,9 @@ public class 反转每对括号间的子串 {
 
     public String reverseParentheses(String s) {
         int len;
-        if (s == null || (len = s.length()) == 0)
+        if (s == null || (len = s.length()) == 0) {
             return "";
+        }
         Stack<String> stack = new Stack<>();
         stack.push("");
         for (int i = 0; i < len; i++) {

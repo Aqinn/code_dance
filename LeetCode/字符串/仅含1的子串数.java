@@ -19,8 +19,9 @@ public class 仅含1的子串数 {
 
     public int numSub(String s) {
         int len;
-        if (s == null || (len = s.length()) == 0)
+        if (s == null || (len = s.length()) == 0) {
             return 0;
+        }
         long size = 0;
         int i = 0;
         long res = 0;
