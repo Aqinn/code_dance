@@ -9,6 +9,9 @@ public class 删除链表的倒数第N个节点 {
     /**
      * 题目描述:
      * 给定一个链表，删除链表的倒数第n个节点并返回链表的头指针
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/f95dcdafbde44b22a6d741baf71653f6
      */
 
     /**
@@ -23,10 +26,12 @@ public class 删除链表的倒数第N个节点 {
             count++;
             head = head.next;
         }
-        if (count < n)
+        if (count < n) {
             return null;
-        if (count == n)
+        }
+        if (count == n) {
             return res.next;
+        }
         head = res;
         while (count-- > n) {
             if (count == n) {

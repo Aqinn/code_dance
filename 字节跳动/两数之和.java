@@ -17,6 +17,9 @@ public class 两数之和 {
      * 例如：
      * 给出的数组为 {20, 70, 110, 150},目标值为90
      * 输出 index1=1, index2=2
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/20ef0972485e41019e39543e8e895b7f
      */
 
     /**

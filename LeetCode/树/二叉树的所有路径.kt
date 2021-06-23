@@ -12,6 +12,10 @@ class 二叉树的所有路径 {
      * 题目描述:
      * 给定一个二叉树，返回所有从根节点到叶子节点的路径。
      * 说明: 叶子节点是指没有子节点的节点。
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/binary-tree-paths
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     fun binaryTreePaths(root: TreeNode?): List<String> {

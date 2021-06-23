@@ -37,8 +37,9 @@ public class 排序 {
                 lChild++;
             }
             // 与父节点比
-            if (arr[lChild] <= temp)
+            if (arr[lChild] <= temp) {
                 break;
+            }
             // 交换父子位置
             arr[rootIdx] = arr[lChild];
             rootIdx = lChild;

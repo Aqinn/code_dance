@@ -30,6 +30,7 @@ public class 三个线程交替打印1至100_ReentrantLock {
             number = n;
         }
 
+        @Override
         public void run() {
             while (true) {
                 lock.lock();

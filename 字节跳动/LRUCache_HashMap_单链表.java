@@ -32,10 +32,14 @@ public class LRUCache_HashMap_单链表 {
      * cache.get(1);       // 返回 -1 (未找到)
      * cache.get(3);       // 返回  3
      * cache.get(4);       // 返回  4
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/e3769a5f49894d49b871c09cadd13a61
      **/
 
     private int mCapacity;
-    private Map<Integer, ListNode> mMap;  // map中存放的是要找的节点的前驱
+    // map中存放的是要找的节点的前驱
+    private Map<Integer, ListNode> mMap;
     private ListNode mHead;
     private ListNode mTail;
 

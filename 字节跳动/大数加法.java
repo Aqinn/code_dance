@@ -10,6 +10,9 @@ public class 大数加法 {
      * 题目描述:
      * 以字符串的形式读入两个数字，编写一个函数计算它们的和，以字符串形式返回。
      * （字符串长度不大于100000，保证字符串仅由'0'~'9'这10种字符组成）
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/11ae12e8c6fe48f883cad618c2e81475
      */
 
     /**
@@ -21,10 +24,12 @@ public class 大数加法 {
      * @return string字符串
      */
     public String solve(String s, String t) {
-        if (s == null || "".equals(s))
+        if (s == null || "".equals(s)) {
             return t == null ? "" : t;
-        if (t == null || "".equals(t))
+        }
+        if (t == null || "".equals(t)) {
             return s == null ? "" : s;
+        }
         int i = s.length() - 1, j = t.length() - 1;
         int sum = 0, extra = 0;
         StringBuilder sb = new StringBuilder();
@@ -72,8 +77,9 @@ public class 大数加法 {
     }
 
     private int getIntFromChar(char c) {
-        if ('0' <= c && c <= '9')
+        if ('0' <= c && c <= '9') {
             return c - '0';
+        }
         return -1;
     }
 

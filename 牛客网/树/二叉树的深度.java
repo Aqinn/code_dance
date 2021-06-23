@@ -15,11 +15,15 @@ public class 二叉树的深度 {
      * 题目描述:
      * 输入一棵二叉树，求该树的深度。
      * 从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/8a2b2bf6c19b4f23a9bdb9b233eefa73
      */
 
     public int TreeDepth(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return 0;
+        }
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         int deep = 1;
@@ -29,8 +33,9 @@ public class 二叉树的深度 {
             while (size-- > 0) {
                 TreeNode temp = queue.poll();
                 if (temp == null) {
-                    if (count > deep)
+                    if (count > deep) {
                         deep = count;
+                    }
                     continue;
                 }
                 queue.add(temp.left);

@@ -9,14 +9,19 @@ public class 最长公共前缀 {
     /**
      * 题目描述:
      * 编写一个函数来查找字符串数组中的最长公共前缀。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/28eb3175488f4434a4a6207f6f484f47
      */
 
     public String longestCommonPrefix(String[] strs) {
         int len;
-        if (strs == null || (len = strs.length) == 0)
+        if (strs == null || (len = strs.length) == 0) {
             return "";
-        if (len == 1)
+        }
+        if (len == 1) {
             return strs[0];
+        }
         StringBuilder sb = new StringBuilder();
         for (int cur = 0; cur < strs[0].length(); cur++) {
             char first = strs[0].charAt(cur);

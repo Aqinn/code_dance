@@ -12,12 +12,16 @@ public class 合并区间 {
     /**
      * 题目描述:
      * 给出一组区间，请合并所有重叠的区间。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/69f4e5b7ad284a478777cb2a17fb5e6a
      */
 
     public ArrayList<Interval> merge(ArrayList<Interval> intervals) {
         intervals.sort((o1, o2) -> {
-            if (o1.start == o2.start)
+            if (o1.start == o2.start) {
                 return o1.end - o2.end;
+            }
             return o1.start - o2.start;
         });
         Iterator<Interval> it = intervals.iterator();

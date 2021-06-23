@@ -26,22 +26,29 @@ public class 交错字符串 {
      * <p>
      * 输入：s1 = "", s2 = "", s3 = ""
      * 输出：true
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/interleaving-string
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     public boolean isInterleave(String s1, String s2, String s3) {
-        if (s1 == null || s2 == null || s3 == null)
+        if (s1 == null || s2 == null || s3 == null) {
             return false;
+        }
         if ("".equals(s1)) {
             return s2.equals(s3);
         }
         if ("".equals(s2)) {
             return s1.equals(s3);
         }
-        if ("".equals(s3))
+        if ("".equals(s3)) {
             return false;
+        }
         int l1 = s1.length(), l2 = s2.length(), l3 = s3.length();
-        if(l1 + l2 != l3)
+        if(l1 + l2 != l3) {
             return false;
+        }
         boolean[][] dp = new boolean[l1+1][l2+1];
         dp[0][0] = true;
         for(int i=0; i<=l1; i++){
@@ -64,20 +71,24 @@ public class 交错字符串 {
         if (isEnd) {
             return true;
         }
-        if (s1 == null || s2 == null || s3 == null)
+        if (s1 == null || s2 == null || s3 == null) {
             return false;
+        }
         if ("".equals(s1)) {
-            if (s2.equals(s3))
+            if (s2.equals(s3)) {
                 isEnd = true;
+            }
             return s2.equals(s3);
         }
         if ("".equals(s2)) {
-            if (s1.equals(s3))
+            if (s1.equals(s3)) {
                 isEnd = true;
+            }
             return s1.equals(s3);
         }
-        if ("".equals(s3))
+        if ("".equals(s3)) {
             return false;
+        }
         char c1 = s1.charAt(0);
         char c2 = s2.charAt(0);
         char c3 = s3.charAt(0);

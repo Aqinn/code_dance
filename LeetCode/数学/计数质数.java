@@ -11,6 +11,10 @@ public class 计数质数 {
     /**
      * 题目描述:
      * 统计所有小于非负整数 n 的质数的数量。
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/count-primes
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     public int countPrimes(int n) {

@@ -19,6 +19,10 @@ public class 移除元素 {
      * 输入：nums = [0,1,2,2,3,0,4,2], val = 2
      * 输出：5, nums = [0,1,4,0,3]
      * 解释：函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。注意这五个元素可为任意顺序。你不需要考虑数组中超出新长度后面的元素。
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/remove-element
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     public int _removeElement(int[] nums, int val) {

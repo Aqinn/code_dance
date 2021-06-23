@@ -13,6 +13,9 @@ public class 数组中只出现一次的数字 {
     /**
      * 题目描述:
      * 一个整型数组里除了两个数字之外，其他的数字都出现了两次。请写程序找出这两个只出现一次的数字。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/389fc1c3d3be4479a154f63f495abff8
      */
 
     public static void main(String[] args) {
@@ -30,15 +33,17 @@ public class 数组中只出现一次的数字 {
             temp ^= array[i];
         }
         int index = 1;
-        while((index & temp)==0)
+        while((index & temp)==0) {
             index = index <<1;
+        }
         num1[0] = 0;
         num2[0] = 0;
         for (int i = 0; i < array.length; i++) {
-            if ((index & array[i]) == 0)
+            if ((index & array[i]) == 0) {
                 num1[0] ^= array[i];
-            else
+            } else {
                 num2[0] ^= array[i];
+            }
         }
     }
 

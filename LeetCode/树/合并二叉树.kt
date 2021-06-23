@@ -12,6 +12,10 @@ class 合并二叉树 {
      * 你需要将他们合并为一个新的二叉树。
      * 合并的规则是如果两个节点重叠，那么将他们的值相加作为节点合并后的新值，
      * 否则不为NULL 的节点将直接作为新二叉树的节点。
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/merge-two-binary-trees
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     fun mergeTrees(root1: TreeNode?, root2: TreeNode?): TreeNode? {

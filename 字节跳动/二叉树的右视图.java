@@ -13,6 +13,9 @@ public class 二叉树的右视图 {
     /**
      * 题目描述:
      * 请根据二叉树的前序遍历，中序遍历恢复二叉树，并打印出二叉树的右视图
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/c9480213597e45f4807880c763ddd5f0
      */
 
     /**
@@ -24,8 +27,9 @@ public class 二叉树的右视图 {
      * @return int整型一维数组
      */
     public int[] solve(int[] xianxu, int[] zhongxu) {
-        if (xianxu == null || zhongxu == null)
+        if (xianxu == null || zhongxu == null) {
             return null;
+        }
         TreeNode root = buildTree(xianxu, zhongxu, 0, 0, xianxu.length);
         ArrayList<Integer> list = new ArrayList<>();
         Queue<TreeNode> q = new LinkedList<>();
@@ -35,24 +39,28 @@ public class 二叉树的右视图 {
             int val = -1;
             while (size-- > 0) {
                 TreeNode temp = q.poll();
-                if (temp == null)
+                if (temp == null) {
                     continue;
+                }
                 q.add(temp.left);
                 q.add(temp.right);
                 val = temp.val;
             }
-            if (val != -1)
+            if (val != -1) {
                 list.add(val);
+            }
         }
         int[] res = new int[list.size()];
-        for (int i = 0; i < list.size(); i++)
+        for (int i = 0; i < list.size(); i++) {
             res[i] = list.get(i);
+        }
         return res;
     }
 
     public TreeNode buildTree(int[] xianxu, int[] zhongxu, int rootIdx, int zxStart, int len) {
-        if (len <= 0)
+        if (len <= 0) {
             return null;
+        }
         TreeNode root = null;
         for (int i = zxStart; i < zxStart + len; i++) {
             if (xianxu[rootIdx] == zhongxu[i]) {

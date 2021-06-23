@@ -17,15 +17,22 @@ public class 树中两个节点的最低公共祖先_二叉查找树 {
      * <p>
      * 所有节点的值都是唯一的。
      * p、q 为不同节点且均存在于给定的二叉搜索树中。
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if (root == null)
+        if (root == null) {
             return null;
-        if (root.val > p.val && root.val > q.val)
+        }
+        if (root.val > p.val && root.val > q.val) {
             return lowestCommonAncestor(root.left, p, q);
-        if (root.val < p.val && root.val < q.val)
+        }
+        if (root.val < p.val && root.val < q.val) {
             return lowestCommonAncestor(root.right, p, q);
+        }
         return root;
     }
 

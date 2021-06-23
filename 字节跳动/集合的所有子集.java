@@ -16,13 +16,17 @@ public class 集合的所有子集 {
      * 注意：
      * 你给出的子集中的元素必须按升序排列
      * 给出的解集中不能出现重复的元素
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/c333d551eb6243e0b4d92e37a06fbfc9
      */
 
     private ArrayList<ArrayList<Integer>> res = new ArrayList<>();
 
     public ArrayList<ArrayList<Integer>> subsets(int[] S) {
-        if (S == null || S.length == 0)
+        if (S == null || S.length == 0) {
             return res;
+        }
         Arrays.sort(S);
         LinkedList<Integer> temp = new LinkedList<>();
         solve(S, 0, temp);

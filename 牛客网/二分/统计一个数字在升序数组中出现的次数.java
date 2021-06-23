@@ -15,6 +15,9 @@ public class 统计一个数字在升序数组中出现的次数 {
      * <p>
      * 输出
      * 4
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/70610bf967994b22bb1c26f9ae901fa2
      */
 
     public static void main(String[] args) {
@@ -23,8 +26,9 @@ public class 统计一个数字在升序数组中出现的次数 {
     }
 
     public int GetNumberOfK(int[] array, int k) {
-        if (array.length == 0)
+        if (array.length == 0) {
             return 0;
+        }
         int l = 0, r = array.length;
         int leftBound, rightBound;
         while (l < r) {

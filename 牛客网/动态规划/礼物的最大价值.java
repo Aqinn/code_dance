@@ -16,6 +16,9 @@ public class 礼物的最大价值 {
      * 请设计一个算法使小东拿到价值最高的礼物。
      * <p>
      * 给定一个6*6的矩阵board，其中每个元素为对应格子的礼物价值,左上角为[0,0],请返回能获得的最大价值，保证每个礼物价值大于100小于1000。
+     *
+     * 来源：牛客
+     * 链接：
      */
 
     public static void main(String[] args) {
@@ -39,10 +42,12 @@ public class 礼物的最大价值 {
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
                 int up = 0, left = 0;
-                if (j - 1 >= 0)
+                if (j - 1 >= 0) {
                     left = dp[i][j - 1];
-                if (i - 1 >= 0)
+                }
+                if (i - 1 >= 0) {
                     up = dp[i - 1][j];
+                }
                 dp[i][j] = board[i][j] + Math.max(up, left);
             }
         }

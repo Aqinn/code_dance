@@ -9,6 +9,9 @@ public class 分别按照二叉树先序和中序和后序打印所有的节点 
     /**
      * 题目描述:
      * 如类名
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/a9fec6c46a684ad5a3abd4e365a9d362
      */
 
     public int[][] threeOrders (TreeNode root) {
@@ -20,15 +23,17 @@ public class 分别按照二叉树先序和中序和后序打印所有的节点 
     }
 
     private int count(TreeNode root){
-        if(root == null)
+        if(root == null) {
             return 0;
+        }
         return count(root.left) + count(root.right) + 1;
     }
 
     private int preIdx=0;
     private void pre(int[] res,  TreeNode node){
-        if (node == null)
+        if (node == null) {
             return;
+        }
         res[preIdx++] = node.val;
         pre(res, node.left);
         pre(res, node.right);
@@ -36,8 +41,9 @@ public class 分别按照二叉树先序和中序和后序打印所有的节点 
 
     private int midIdx=0;
     private void mid(int[] res,  TreeNode node){
-        if (node == null)
+        if (node == null) {
             return;
+        }
         mid(res, node.left);
         res[midIdx++] = node.val;
         mid(res, node.right);
@@ -45,8 +51,9 @@ public class 分别按照二叉树先序和中序和后序打印所有的节点 
 
     private int backIdx=0;
     private void back(int[] res,  TreeNode node){
-        if (node == null)
+        if (node == null) {
             return;
+        }
         back(res, node.left);
         back(res, node.right);
         res[backIdx++] = node.val;

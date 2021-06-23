@@ -19,11 +19,15 @@ public class 序列化二叉树 {
      * 二叉树的反序列化是指：根据某种遍历顺序得到的序列化字符串结果str，重构二叉树。
      * <p>
      * 例如，我们可以把一个只有根节点为1的二叉树序列化为"1,"，然后通过自己的函数来解析回这个二叉树
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/cf7e25aa97c04cc1a68c8f040e71fb84
      */
 
     String Serialize(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return "#";
+        }
         return root.val + " " + Serialize(root.left) + " " + Serialize(root.right);
     }
 
@@ -35,16 +39,18 @@ public class 序列化二叉树 {
     }
 
     TreeNode Deserialize() {
-        if (deserializeStr.length() == 0)
+        if (deserializeStr.length() == 0) {
             return null;
+        }
         // 获得一个节点值的结束下标
         int index = deserializeStr.indexOf(" ");
         // 或者该节点的值。PS：找不到" "的下标证明这是最后一个值了，最后没有“ ”
         String strVal = index == -1 ? deserializeStr : deserializeStr.substring(0, index);
         // 找到了值以后，修改 deserializeStr
         deserializeStr = index == -1 ? "" : deserializeStr.substring(index + 1);
-        if ("#".equals(strVal))
+        if ("#".equals(strVal)) {
             return null;
+        }
         int intVal = Integer.valueOf(strVal);
         TreeNode temp = new TreeNode(intVal);
         temp.left = Deserialize();

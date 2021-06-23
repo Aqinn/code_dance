@@ -11,6 +11,9 @@ public class 矩阵中的路径 {
      * 判断在一个矩阵中是否存在一条包含某字符串所有字符的路径。
      * 路径可以从矩阵中的任意一个格子开始，每一步可以在矩阵中向上下左右移动一个格子。
      * 如果一条路径经过了矩阵中的某一个格子，则该路径不能再进入该格子。
+     *
+     * 来源：牛客
+     * 链接：
      */
 
     public static void main(String[] args) {
@@ -45,34 +48,39 @@ public class 矩阵中的路径 {
 //        showMatrix(been, rows, cols);
         if (matrix[row * cols + col] == str[begin]) {
             // 是否全部匹配成功？
-            if (begin == str.length - 1)
+            if (begin == str.length - 1) {
                 return true;
+            }
             // 如果匹配上了，那就看看上下左右的匹不匹配剩下的字符
             been[row * cols + col] = 1;
             boolean left = false, right = false, up = false, down = false;
             // 左
             if (col - 1 >= 0 && been[row * cols + (col - 1)] != 1) {
                 left = match(matrix, rows, cols, row, col - 1, str, begin + 1, been);
-                if (left)
+                if (left) {
                     return true;
+                }
             }
             // 右
             if (col + 1 < cols && been[row * cols + (col + 1)] != 1) {
                 right = match(matrix, rows, cols, row, col + 1, str, begin + 1, been);
-                if (right)
+                if (right) {
                     return true;
+                }
             }
             // 上
             if (row - 1 >= 0 && been[(row - 1) * cols + col] != 1) {
                 up = match(matrix, rows, cols, row - 1, col, str, begin + 1, been);
-                if (up)
+                if (up) {
                     return true;
+                }
             }
             // 下
             if (row + 1 < rows && been[(row + 1) * cols + col] != 1) {
                 down = match(matrix, rows, cols, row + 1, col, str, begin + 1, been);
-                if (down)
+                if (down) {
                     return true;
+                }
             }
             // 如果上下左右都不匹配，证明这条路白走
             been[row * cols + col] = 0;

@@ -9,6 +9,9 @@ public class 最长递增子序列 {
     /**
      * 题目描述:
      * 给定数组arr，设长度为n，输出arr的最长递增子序列。（如果有多个答案，请输出其中字典序最小的）
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/9cf027bf54714ad889d4f30ff0ae5481
      */
 
     /**
@@ -37,8 +40,9 @@ public class 最长递增子序列 {
         }
         int[] res = new int[maxLen];
         for (int i = record.length - 1; i >= 0; i--) {
-            if (record[i] == maxLen)
+            if (record[i] == maxLen) {
                 res[maxLen-- - 1] = arr[i];
+            }
         }
         return res;
     }

@@ -16,11 +16,15 @@ public class 没有重复项数字的所有排列 {
      * [1,2,3]的所有排列如下
      * [1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2], [3,2,1].
      * （以数字在数组中的位置靠前为优先级，按字典序排列输出。）
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/4bcf3081067a4d028f95acee3ddcd2b1
      */
 
     public ArrayList<ArrayList<Integer>> permute(int[] num) {
-        if (num == null || num.length < 1)
+        if (num == null || num.length < 1) {
             return res;
+        }
         Arrays.sort(num);
         ArrayList<Integer> temp = new ArrayList<>();
         solve(temp, num);

@@ -14,11 +14,15 @@ public class 合并K个已排序的链表 {
     /**
      * 题目描述:
      * 合并 K 个已排序的链表并将其作为一个已排序的链表返回。分析并描述其复杂度。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/65cfde9e5b9b4cf2b6bafa5f3ef33fa6
      */
 
     public ListNode mergeKLists(ArrayList<ListNode> lists) {
-        if (lists == null || lists.size() == 0)
+        if (lists == null || lists.size() == 0) {
             return null;
+        }
         ListNode res = new ListNode(-1);
         ListNode cur = res;
         PriorityQueue<ListNode> q = new PriorityQueue<ListNode>(lists.size(),
@@ -26,35 +30,40 @@ public class 合并K个已排序的链表 {
                     return o1.val - o2.val;
                 });
         for (ListNode node : lists) {
-            if (node != null)
+            if (node != null) {
                 q.add(node);
+            }
         }
         while (!q.isEmpty()) {
             cur.next = q.poll();
             cur = cur.next;
-            if (cur.next != null)
+            if (cur.next != null) {
                 q.add(cur.next);
+            }
             cur.next = null;
         }
         return res.next;
     }
 
     public ListNode _mergeKLists(ArrayList<ListNode> lists) {
-        if (lists == null || lists.size() == 0)
+        if (lists == null || lists.size() == 0) {
             return null;
+        }
         ListNode res = new ListNode(-1);
         ListNode cur = res;
         Iterator<ListNode> it = lists.iterator();
         while (it.hasNext()) {
             ListNode next = it.next();
-            if (next == null)
+            if (next == null) {
                 it.remove();
+            }
         }
         // 上面的 for 循环可以优化为 lists.removeIf(Objects::isNull);
         while (!lists.isEmpty()) {
             ListNode min = findMinAndRemove(lists);
-            if (min == null)
+            if (min == null) {
                 break;
+            }
             cur.next = min;
             cur = cur.next;
         }
@@ -64,8 +73,9 @@ public class 合并K个已排序的链表 {
     private ListNode findMinAndRemove(ArrayList<ListNode> lists) {
         Iterator<ListNode> it = lists.iterator();
         ListNode min = it.hasNext() ? it.next() : null;
-        if (min == null)
+        if (min == null) {
             return null;
+        }
         while (it.hasNext()) {
             ListNode next = it.next();
             if (min.val > next.val) {
@@ -73,14 +83,16 @@ public class 合并K个已排序的链表 {
             }
         }
         lists.remove(min);
-        if (min.next != null)
+        if (min.next != null) {
             lists.add(min.next);
+        }
         return min;
     }
 
     public ListNode __mergeKLists(ArrayList<ListNode> lists) {
-        if (lists == null || lists.size() == 0)
+        if (lists == null || lists.size() == 0) {
             return null;
+        }
         int size = lists.size();
         ListNode root = new ListNode(-1);
         ListNode cur = root;

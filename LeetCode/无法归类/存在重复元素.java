@@ -15,11 +15,16 @@ public class 存在重复元素 {
      * <p>
      * 输入: [1,1,1,3,3,4,3,2,4,2]
      * 输出: true
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/contains-duplicate
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     public boolean containsDuplicate(int[] nums) {
-        if (nums == null)
+        if (nums == null) {
             return false;
+        }
         Set<Integer> set = new HashSet<>();
         int len = nums.length;
         for (int i = 0; i < len; i++) {

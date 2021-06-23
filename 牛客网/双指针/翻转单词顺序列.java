@@ -15,6 +15,9 @@ public class 翻转单词顺序列 {
      * 例如，“student. a am I”。
      * 后来才意识到，这家伙原来把句子单词的顺序翻转了，正确的句子应该是“I am a student.”。
      * Cat对一一的翻转这些单词顺序可不在行，你能帮助他么？
+     *
+     * 来源：牛客
+     * 链接：
      */
 
     public static void main(String[] args) {
@@ -30,16 +33,18 @@ public class 翻转单词顺序列 {
                 reverse(chars, idx, i - 1);
                 idx = i + 1;
             }
-            if (i == chars.length - 1)
+            if (i == chars.length - 1) {
                 reverse(chars, idx, chars.length - 1);
+            }
         }
         reverse(chars, 0, chars.length - 1);
         return String.valueOf(chars);
     }
 
     private void reverse(char[] chars, int start, int end) {
-        if (start >= end)
+        if (start >= end) {
             return;
+        }
         for (int i = start; i <= (start + end) / 2; i++) {
             swap(chars, i, end - i + start);
         }

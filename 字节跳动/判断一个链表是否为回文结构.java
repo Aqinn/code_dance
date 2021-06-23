@@ -11,6 +11,9 @@ public class 判断一个链表是否为回文结构 {
     /**
      * 题目描述:
      * 给定一个链表，请判断该链表是否是回文结构
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/3fed228444e740c8be66232ce8b87c2f
      */
 
     public boolean isPail(ListNode head) {
@@ -22,8 +25,9 @@ public class 判断一个链表是否为回文结构 {
             cur = cur.next;
         }
         while (head != null) {
-            if (head.val != stack.pop().val)
+            if (head.val != stack.pop().val) {
                 return false;
+            }
             head = head.next;
         }
         return true;

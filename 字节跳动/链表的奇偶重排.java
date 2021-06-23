@@ -12,12 +12,16 @@ public class 链表的奇偶重排 {
      * 题目描述:
      * 给定一个单链表，请设定一个函数，将链表的奇数位节点和偶数位节点分别放在一起，重排后输出。
      * 注意是节点的编号而非节点的数值。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/02bf49ea45cd486daa031614f9bd6fc3
      */
 
     // 思路清晰
     public ListNode oddEvenList(ListNode head) {
-        if (head == null)
+        if (head == null) {
             return null;
+        }
         ListNode jiCur = head;
         ListNode ouHead = head.next;
         ListNode ouCur = head.next;
@@ -33,8 +37,9 @@ public class 链表的奇偶重排 {
 
     // 稍微聪明一点点的做法，但逻辑还不够清晰
     public ListNode _oddEvenList(ListNode head) {
-        if (head == null)
+        if (head == null) {
             return null;
+        }
         ListNode jiCur = head;
         ListNode ouHead = head.next;
         ListNode ouCur = head.next;
@@ -66,20 +71,22 @@ public class 链表的奇偶重排 {
         ListNode cur = head;
         boolean flag = true;
         while (cur != null) {
-            if (flag)
+            if (flag) {
                 ji.add(cur.val);
-            else
+            } else {
                 ou.add(cur.val);
+            }
             flag = !flag;
             cur = cur.next;
         }
         cur = head;
         int jiIdx = 0, ouIdx = 0;
         while (cur != null) {
-            if (jiIdx < ji.size())
+            if (jiIdx < ji.size()) {
                 cur.val = ji.get(jiIdx++);
-            else
+            } else {
                 cur.val = ou.get(ouIdx++);
+            }
             cur = cur.next;
         }
         return head;

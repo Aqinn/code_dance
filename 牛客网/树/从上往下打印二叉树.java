@@ -15,21 +15,28 @@ public class 从上往下打印二叉树 {
     /**
      * 题目描述:
      * 从上往下打印出二叉树的每个节点，同层节点从左至右打印。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/445c44d982d04483b04a54f298796288
      */
 
     public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
         ArrayList<Integer> list = new ArrayList<>();
-        if (root == null) return list;
+        if (root == null) {
+            return list;
+        }
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         TreeNode temp;
         while (!queue.isEmpty()) {
             temp = queue.poll();
             list.add(temp.val);
-            if (temp.left != null)
+            if (temp.left != null) {
                 queue.add(temp.left);
-            if (temp.right != null)
+            }
+            if (temp.right != null) {
                 queue.add(temp.right);
+            }
         }
         return list;
     }

@@ -15,12 +15,16 @@ public class 把二叉树打印成多行 {
     /**
      * 题目描述:
      * 从上到下按层打印二叉树，同一层结点从左至右输出。每一层输出一行。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/445c44d982d04483b04a54f298796288
      */
 
     ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
         ArrayList<ArrayList<Integer>> list = new ArrayList<>();
-        if (pRoot == null)
+        if (pRoot == null) {
             return list;
+        }
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(pRoot);
         while (!queue.isEmpty()) {
@@ -28,14 +32,16 @@ public class 把二叉树打印成多行 {
             int size = queue.size();
             while (size-- > 0) {
                 TreeNode temp = queue.poll();
-                if (temp == null)
+                if (temp == null) {
                     continue;
+                }
                 vals.add(temp.val);
                 queue.add(temp.left);
                 queue.add(temp.right);
             }
-            if (vals.size() != 0)
+            if (vals.size() != 0) {
                 list.add(vals);
+            }
         }
         return list;
     }

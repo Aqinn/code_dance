@@ -12,6 +12,9 @@ public class 正则表达式匹配 {
      * 模式中的字符 '.' 表示任意一个字符，而 '*' 表示它前面的字符可以出现任意次（包含 0 次）。
      * 在本题中，匹配是指字符串的所有字符匹配整个模式。
      * 例如，字符串 "aaa" 与模式 "a.a" 和 "ab*ac*a" 匹配，但是与 "aa.a" 和 "ab*a" 均不匹配
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/28970c15befb4ff3a264189087b99ad4
      */
 
     public static void main(String[] args) {
@@ -27,10 +30,12 @@ public class 正则表达式匹配 {
     }
 
     private boolean isMatch(char[] str, int sIdx, char[] pattern, int pIdx) {
-        if (sIdx == str.length && pIdx == pattern.length)
+        if (sIdx == str.length && pIdx == pattern.length) {
             return true;
-        if (pIdx == pattern.length)
+        }
+        if (pIdx == pattern.length) {
             return false;
+        }
         // 进来以后就肯定是正则表达式还没结束，但字符串可能已经结束了
         boolean next = (pIdx + 1 < pattern.length && pattern[pIdx + 1] == '*');
         if (next) {

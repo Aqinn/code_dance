@@ -16,6 +16,10 @@ public class 数组中重复的数据 {
      * 找到所有出现两次的元素。
      * <p>
      * 你可以不用到任何额外空间并在 O (n) 时间复杂度内解决这个问题吗？
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/find-all-duplicates-in-an-array
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     //大佬思路

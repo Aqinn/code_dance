@@ -15,6 +15,10 @@ class 子域名访问计数 {
      * 其格式为访问次数+空格+地址，例如："9001 discuss.leetcode.com"。
      * 接下来会给出一组访问次数和域名组合的列表cpdomains。
      * 要求解析出所有域名的访问次数，输出格式和输入格式相同，不限定先后顺序。
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/subdomain-visit-count
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     fun subdomainVisits(cpdomains: Array<String>): List<String> {

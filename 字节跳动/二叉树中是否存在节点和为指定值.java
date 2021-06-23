@@ -9,6 +9,9 @@ public class 二叉树中是否存在节点和为指定值 {
     /**
      * 题目描述:
      * 给定一个二叉树和一个值 sum，判断是否有从根节点到叶子节点的节点值之和等于 sum 的路径，
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/508378c0823c423baa723ce448cbfd0c
      */
 
     /**
@@ -17,13 +20,16 @@ public class 二叉树中是否存在节点和为指定值 {
      * @return bool布尔型
      */
     public boolean hasPathSum(TreeNode root, int sum) {
-        if (flag)
+        if (flag) {
             return false;
-        if (root == null)
+        }
+        if (root == null) {
             return false;
+        }
         if (root.left == null && root.right == null) {
-            if (sum == root.val)
+            if (sum == root.val) {
                 flag = true;
+            }
             return sum == root.val;
         }
         return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);

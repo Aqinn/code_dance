@@ -23,12 +23,15 @@ public class _36进制加法 {
     }
 
     public String add(String a, String b) {
-        if (a == null || b == null)
+        if (a == null || b == null) {
             return null;
-        if ("".equals(a))
+        }
+        if ("".equals(a)) {
             return b;
-        if ("".equals(b))
+        }
+        if ("".equals(b)) {
             return a;
+        }
         int size = a.length() < b.length() ? a.length() - 1 : b.length() - 1;
         int p = 0;
         StringBuilder sb = new StringBuilder("");

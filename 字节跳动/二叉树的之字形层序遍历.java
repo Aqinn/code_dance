@@ -13,6 +13,9 @@ public class 二叉树的之字形层序遍历 {
     /**
      * 题目描述:
      * 给定一个二叉树，返回该二叉树的之字形层序遍历，（第一层从左向右，下一层从右向左，一直这样交替）
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/47e1687126fa461e8a3aff8632aa5559
      */
 
     /**
@@ -21,8 +24,9 @@ public class 二叉树的之字形层序遍历 {
      */
     public ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode root) {
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
-        if (root == null)
+        if (root == null) {
             return res;
+        }
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
         boolean flag = true;
@@ -31,8 +35,9 @@ public class 二叉树的之字形层序遍历 {
             ArrayList<Integer> list = new ArrayList<>();
             while (size-- > 0) {
                 TreeNode temp = q.poll();
-                if (temp == null)
+                if (temp == null) {
                     continue;
+                }
                 if (flag) {
                     list.add(temp.val);
                 } else {
@@ -42,8 +47,9 @@ public class 二叉树的之字形层序遍历 {
                 q.add(temp.right);
             }
             flag = !flag;
-            if (list.size() > 0)
+            if (list.size() > 0) {
                 res.add(list);
+            }
         }
         return res;
     }

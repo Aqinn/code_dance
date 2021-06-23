@@ -9,6 +9,9 @@ public class 合并有序链表 {
     /**
      * 题目描述:
      * 将两个有序的链表合并为一个新链表，要求新的链表是通过拼接两个链表的节点来生成的，且合并后新链表依然有序。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/a479a3f0c4554867b35356e0d57cf03d
      */
 
     /**
@@ -17,12 +20,15 @@ public class 合并有序链表 {
      * @return ListNode类
      */
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        if (l1 == null && l2 == null)
+        if (l1 == null && l2 == null) {
             return null;
-        if (l1 == null)
+        }
+        if (l1 == null) {
             return l2;
-        if (l2 == null)
+        }
+        if (l2 == null) {
             return l1;
+        }
         ListNode root = l1.val < l2.val ? l1 : l2;
         ListNode other = l1 == root ? l2 : l1;
         ListNode cur = root;
@@ -44,10 +50,12 @@ public class 合并有序链表 {
     }
 
     public ListNode _mergeTwoLists (ListNode l1, ListNode l2) {
-        if(l1 == null)
+        if(l1 == null) {
             return l2;
-        if(l2 == null)
+        }
+        if(l2 == null) {
             return l1;
+        }
         ListNode root = l1.val < l2.val? l1:l2;
         ListNode tail = root;
         l1 = l1==root?l1.next:l1;

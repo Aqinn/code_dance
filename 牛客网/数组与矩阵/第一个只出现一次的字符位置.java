@@ -15,6 +15,9 @@ public class 第一个只出现一次的字符位置 {
      * Input: abacc
      * <p>
      * Output: b
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/1c82e8cf713b4bbeb2a5b31cf5b0417c
      */
 
     public static void main(String[] args) {
@@ -28,8 +31,9 @@ public class 第一个只出现一次的字符位置 {
             idx[str.charAt(i)]++;
         }
         for (int i = 0; i < str.length(); i++) {
-            if (idx[str.charAt(i)] == 1)
+            if (idx[str.charAt(i)] == 1) {
                 return i;
+            }
         }
         return -1;
     }

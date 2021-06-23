@@ -28,8 +28,9 @@ public class 字符串中的字符顺序 {
     }
 
     public static int solve(String str) {
-        if (str == null)
+        if (str == null) {
             return 0;
+        }
         int count = 0;
         boolean flag = false;
         StringBuilder sb = new StringBuilder(str);

@@ -22,6 +22,9 @@ public class 二叉树层序遍历 {
      * [9,20],
      * [15,7]
      * ]
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/04a5560e43e24e9db4595865dc9c63a3
      */
 
     public class TreeNode {
@@ -37,8 +40,9 @@ public class 二叉树层序遍历 {
      */
     public ArrayList<ArrayList<Integer>> levelOrder (TreeNode root) {
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
-        if (root == null)
+        if (root == null) {
             return res;
+        }
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
         while(q.size()!=0){
@@ -46,14 +50,16 @@ public class 二叉树层序遍历 {
             int size = q.size();
             while(size-- > 0){
                 TreeNode temp = q.poll();
-                if(temp == null)
+                if(temp == null) {
                     continue;
+                }
                 list.add(temp.val);
                 q.add(temp.left);
                 q.add(temp.right);
             }
-            if (list.size() != 0)
+            if (list.size() != 0) {
                 res.add(list);
+            }
         }
         return res;
     }

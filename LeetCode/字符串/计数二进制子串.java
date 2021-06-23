@@ -24,6 +24,10 @@ public class 计数二进制子串 {
      * 有6个子串具有相同数量的连续1和0：“0011”，“01”，“1100”，“10”，“0011” 和 “01”。
      * 请注意，一些重复出现的子串要计算它们出现的次数。
      * 另外，“00110011”不是有效的子串，因为所有的0（和1）没有组合在一起。
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/count-binary-substrings
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     public int countBinarySubstrings(String s) {

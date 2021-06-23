@@ -4,7 +4,7 @@ package 腾讯.数学;
  * @Author Aqinn
  * @Date 2021/3/3 1:17 下午
  */
-public class 有关阶乘的两个问题 {
+public class 阶乘末尾0的数量 {
 
 
     /**
@@ -32,11 +32,15 @@ public class 有关阶乘的两个问题 {
      *      1000000000
      *  输出
      *      249999998
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/aa03dff18376454c9d2e359163bf44b8
      */
 
     public long thenumberof0(long n) {
-        if (n <= 0)
+        if (n <= 0) {
             return 0;
+        }
         long res = 0;
         while (5 <= n) {
             res += n / 5;

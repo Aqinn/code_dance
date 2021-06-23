@@ -11,6 +11,9 @@ public class 表达式求值 {
     /**
      * 题目描述:
      * 请写一个整数计算器，支持加减乘三种运算和括号。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/c215ba61c8b1443b996351df929dc4d4
      */
 
     public static void main(String[] args) {
@@ -19,8 +22,9 @@ public class 表达式求值 {
     }
 
     public int solve(String s) {
-        if (s == null || "".equals(s))
+        if (s == null || "".equals(s)) {
             return 0;
+        }
         int number = 0, sum = 0;
         char[] arr = s.toCharArray();
         int len = arr.length;
@@ -35,22 +39,24 @@ public class 表达式求值 {
                 int count = 1;
                 int j = i + 1;
                 while (count > 0) {
-                    if (arr[j] == '(')
+                    if (arr[j] == '(') {
                         count++;
-                    else if (arr[j] == ')')
+                    } else if (arr[j] == ')') {
                         count--;
+                    }
                     j++;
                 }
                 number = solve(s.substring(i + 1, j - 1));
                 i = j - 1;
             }
             if (!Character.isDigit(c) || i == arr.length - 1) {
-                if (sign == '+')
+                if (sign == '+') {
                     stack.push(number);
-                else if (sign == '-')
+                } else if (sign == '-') {
                     stack.push(-number);
-                else if (sign == '*')
+                } else if (sign == '*') {
                     stack.push(stack.pop() * number);
+                }
                 number = 0;
                 sign = c;
             }

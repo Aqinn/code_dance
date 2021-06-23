@@ -14,6 +14,9 @@ public class 子数组的最大累加和 {
      * [要求]
      * 时间复杂度为 O(n)
      * 空间复杂度为 O(1)
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/554aa508dd5d4fefbf0f86e5fe953abd
      */
 
     /**
@@ -27,8 +30,9 @@ public class 子数组的最大累加和 {
         int max = arr[0];
         for (int i = 1; i < arr.length; i++) {
             now = Math.max(now + arr[i], arr[i]);
-            if (now > max)
+            if (now > max) {
                 max = now;
+            }
         }
         return max;
     }

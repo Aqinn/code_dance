@@ -46,6 +46,10 @@ public class 罗马数字转整数 {
      * 输入: "MCMXCIV"
      * 输出: 1994
      * 解释: M = 1000, CM = 900, XC = 90, IV = 4.
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/roman-to-integer
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     public static void main(String[] args) {
@@ -55,8 +59,9 @@ public class 罗马数字转整数 {
 
     public int romanToInt(String s) {
         int len;
-        if (s == null || (len = s.length()) == 0)
+        if (s == null || (len = s.length()) == 0) {
             return 0;
+        }
         Map<Character, Integer> map = new HashMap<>();
         map.put('I', 1);
         map.put('V', 5);
@@ -105,8 +110,9 @@ public class 罗马数字转整数 {
                 }
             }
             Integer add = map.get(ch);
-            if (add == null)
+            if (add == null) {
                 return 0;
+            }
             sum += add;
             i++;
         }

@@ -17,11 +17,15 @@ public class 圆圈中最后剩下的数 {
      * 直到剩下最后一个小朋友,可以不用表演,并且拿到牛客名贵的“名侦探柯南”典藏版(名额有限哦!!^_^)。
      * 请你试着想下,哪个小朋友会得到这份礼品呢？(注：小朋友的编号是从0到n-1)
      * 如果没有小朋友，请返回-1
+     *
+     * 来源：牛客
+     * 链接：
      */
 
     public int LastRemaining_Solution(int n, int m) {
-        if (n==0)
+        if (n==0) {
             return -1;
+        }
         int win = 0;
         for (int i = 2; i <= n; i++) {
             win = (win + m) % i;

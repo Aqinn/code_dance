@@ -26,6 +26,10 @@ class 打家劫舍3 {
      *
      * 输出: 7
      * 解释: 小偷一晚能够盗取的最高金额 = 3 + 3 + 1 = 7.
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/house-robber-iii
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     fun rob(root: TreeNode?): Int {

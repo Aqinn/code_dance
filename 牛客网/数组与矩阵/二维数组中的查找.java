@@ -21,6 +21,9 @@ public class 二维数组中的查找 {
      * <p>
      * Given target = 5, return true.
      * Given target = 20, return false.
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/5145394607ea4c5f8b25755718bfddba
      */
 
     public static void main(String[] args) {
@@ -35,17 +38,19 @@ public class 二维数组中的查找 {
     }
 
     private static boolean find(int[][] matrix, int target) {
-        if (matrix == null || matrix.length == 0 || matrix[0].length == 0)
+        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
             return false;
+        }
         int rows = matrix.length, cols = matrix[0].length;
         int r = 0, c = cols - 1; // 从右上角开始
         while (r <= rows - 1 && c >= 0) {
-            if (target == matrix[r][c])
+            if (target == matrix[r][c]) {
                 return true;
-            else if (target > matrix[r][c])
+            } else if (target > matrix[r][c]) {
                 r++;
-            else
+            } else {
                 c--;
+            }
         }
         return false;
     }

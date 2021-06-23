@@ -14,16 +14,21 @@ public class 构建乘积数组 {
      * 其中B中的元素B[i]=A[0]*A[1]*...*A[i-1]*A[i+1]*...*A[n-1]。
      * 不能使用除法。（注意：规定B[0] = A[1] * A[2] * ... * A[n-1]，B[n-1] = A[0] * A[1] * ... * A[n-2];）
      * 对于A长度为1的情况，B无意义，故而无法构建，因此该情况不会存在。
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/gou-jian-cheng-ji-shu-zu-lcof/submissions/
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     public static void main(String[] args) {
         构建乘积数组 main = new 构建乘积数组();
-        System.out.println(Arrays.toString(main.multiply(new int[]{1, 2, 3, 4, 5})));
+        System.out.println(Arrays.toString(main.constructArr(new int[]{1, 2, 3, 4, 5})));
     }
 
-    public int[] multiply(int[] A) {
-        if (A.length <= 1)
+    public int[] constructArr(int[] A) {
+        if (A.length <= 1) {
             return new int[0];
+        }
         int[] B = new int[A.length];
         int[] dp_left = new int[A.length];
         int[] dp_right = new int[A.length];

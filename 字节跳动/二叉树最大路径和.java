@@ -10,6 +10,9 @@ public class 二叉树最大路径和 {
      * 题目描述:
      * 给定一个二叉树，请计算节点值之和最大的路径的节点值之和是多少。
      * 这个路径的开始节点和结束节点可以是二叉树中的任意节点
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/da785ea0f64b442488c125b441a4ba4a
      */
 
     public int maxPathSum(TreeNode root) {
@@ -21,8 +24,9 @@ public class 二叉树最大路径和 {
     private int max = Integer.MIN_VALUE;
 
     private int getMax(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return 0;
+        }
         int left = getMax(root.left);
         int right = getMax(root.right);
         max = Math.max(max,

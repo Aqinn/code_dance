@@ -21,6 +21,9 @@ public class 设计LRU缓存结构 {
      * 若opt=1，接下来两个整数x, y，表示set(x, y)
      * 若opt=2，接下来一个整数x，表示get(x)，若x未出现过或已被移除，则返回-1
      * 对于每个操作2，输出一个答案
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/e3769a5f49894d49b871c09cadd13a61
      */
 
     public static void main(String[] args) {
@@ -45,8 +48,9 @@ public class 设计LRU缓存结构 {
     public int[] LRU (int[][] operators, int k) {
         int size = 0;
         for(int i=0; i<operators.length; i++){
-            if (operators[i][0] == 2)
+            if (operators[i][0] == 2) {
                 size++;
+            }
         }
         int[] res = new int[size];
         cap = k;

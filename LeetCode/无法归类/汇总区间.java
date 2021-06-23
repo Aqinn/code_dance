@@ -23,6 +23,10 @@ public class 汇总区间 {
      * [0,2] --> "0->2"
      * [4,5] --> "4->5"
      * [7,7] --> "7"
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/summary-ranges
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     public List<String> summaryRanges(int[] nums) {

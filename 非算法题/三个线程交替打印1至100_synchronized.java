@@ -26,11 +26,13 @@ public class 三个线程交替打印1至100_synchronized {
             number = n;
         }
 
+        @Override
         public void run() {
             while (true) {
                 synchronized (lock) {
-                    if (count >= target)
+                    if (count >= target) {
                         break;
+                    }
                     if (count % 3 == number) {
                         System.out.println("No." + number + " say " + ++count);
                     } else {

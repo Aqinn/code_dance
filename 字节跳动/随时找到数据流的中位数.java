@@ -20,6 +20,9 @@ public class 随时找到数据流的中位数 {
      * 每行有一个整数 opt 表示操作类型
      * 若 opt=1，则接下来有一个整数 N 表示将 N 加入到结构中。
      * 若 opt=2，则表示询问当前所有数的中位数
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/8c5e99acb1fa4bc3a342cd321100c0cd
      */
 
     /**
@@ -43,10 +46,12 @@ public class 随时找到数据流的中位数 {
                 } else {
                     minHeap.add(a);
                 }
-                if (maxHeap.size() + 2 == minHeap.size())
+                if (maxHeap.size() + 2 == minHeap.size()) {
                     maxHeap.add(minHeap.poll());
-                if (maxHeap.size() - 2 == minHeap.size())
+                }
+                if (maxHeap.size() - 2 == minHeap.size()) {
                     minHeap.add(maxHeap.poll());
+                }
             } else if (opt == 2) {
                 if (maxHeap.size() == 0) {
                     list.add(-1D);
@@ -60,8 +65,9 @@ public class 随时找到数据流的中位数 {
             }
         }
         double[] res = new double[list.size()];
-        for (int i = 0; i < res.length; i++)
+        for (int i = 0; i < res.length; i++) {
             res[i] = list.get(i);
+        }
         return res;
     }
 

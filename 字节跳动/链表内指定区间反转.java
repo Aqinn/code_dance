@@ -9,6 +9,9 @@ public class 链表内指定区间反转 {
     /**
      * 题目描述:
      * 将一个链表 m 位置到 n 位置之间的区间反转，要求时间复杂度O(N)，空间复杂度O(1)。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/b58434e200a648c589ca2063f1faf58c
      */
 
     /**
@@ -18,12 +21,15 @@ public class 链表内指定区间反转 {
      * @return ListNode类
      */
     public ListNode reverseBetween(ListNode head, int m, int n) {
-        if (head == null)
+        if (head == null) {
             return null;
-        if (m <= 0 || n <= 0)
+        }
+        if (m <= 0 || n <= 0) {
             return null;
-        if (m == n)
+        }
+        if (m == n) {
             return head;
+        }
         int size = 0;
         ListNode root = new ListNode(-1);
         root.next = head;

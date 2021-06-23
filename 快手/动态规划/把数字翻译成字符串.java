@@ -10,11 +10,15 @@ public class 把数字翻译成字符串 {
      * 题目描述:
      * 有一种将字母编码成数字的方式：'a'->1, 'b->2', ... , 'z->26'。
      * 现在给一串数字，返回有多少种可能的译码结果
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/046a55e6cd274cffb88fc32dba695668
      */
 
     public int solve(String nums) {
-        if (nums.length() == 0 || nums.charAt(0) == '0')
+        if (nums.length() == 0 || nums.charAt(0) == '0') {
             return 0;
+        }
         int[] dp = new int[nums.length()];
         dp[0] = 1;
         for (int i = 1; i < dp.length; i++) {
@@ -35,23 +39,27 @@ public class 把数字翻译成字符串 {
 
     public int _solve(String nums) {
         int len;
-        if (nums == null || (len = nums.length()) == 0 || nums.charAt(0) == '0')
+        if (nums == null || (len = nums.length()) == 0 || nums.charAt(0) == '0') {
             return 0;
-        if (len == 1)
+        }
+        if (len == 1) {
             return 1;
+        }
         int[] dp = new int[len];
         dp[0] = 1;
         // 长度肯定大于等于2
         for (int i = 1; i < len; i++) {
             char ch1 = nums.charAt(i - 1);
             char ch2 = nums.charAt(i);
-            if (ch2 != '0')
+            if (ch2 != '0') {
                 dp[i] = dp[i - 1];
+            }
             if (is26(ch1, ch2)) {
-                if (i == 1)
+                if (i == 1) {
                     dp[i]++;
-                else
+                } else {
                     dp[i] += dp[i - 2];
+                }
             }
         }
         // System.out.println(Arrays.toString(dp));

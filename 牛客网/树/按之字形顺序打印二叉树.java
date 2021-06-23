@@ -17,27 +17,34 @@ public class 按之字形顺序打印二叉树 {
      * 请实现一个函数按照之字形打印二叉树，
      * 即第一行按照从左到右的顺序打印，第二层按照从右至左的顺序打印，第三行按照从左到右的顺序打印，
      * 其他行以此类推。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/47e1687126fa461e8a3aff8632aa5559
      */
 
     public ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
-        if (pRoot == null)
+        if (pRoot == null) {
             return res;
+        }
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(pRoot);
-        boolean flag = true;  // true代表从左到右输出，如果该行是从左到右输出，那么就应该从右往左存入Queue
+        // true代表从左到右输出，如果该行是从左到右输出，那么就应该从右往左存入Queue
+        boolean flag = true;
         while (!queue.isEmpty()) {
             // 要输出的节点个数
             int size = queue.size();
             ArrayList<Integer> list = new ArrayList<>();
             while (size-- > 0) {
                 TreeNode temp = queue.poll();
-                if (temp == null)
+                if (temp == null) {
                     continue;
-                if (flag)
+                }
+                if (flag) {
                     list.add(temp.val);
-                else
+                } else {
                     list.add(0, temp.val);
+                }
                 queue.add(temp.left);
                 queue.add(temp.right);
             }

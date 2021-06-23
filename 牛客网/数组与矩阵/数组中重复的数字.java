@@ -21,6 +21,9 @@ public class 数组中重复的数字 {
      * <p>
      * Output:
      * 2
+     *
+     * 来源：牛客
+     * 链接：
      */
 
     public static void main(String[] args) {
@@ -31,8 +34,9 @@ public class 数组中重复的数字 {
     private static int findRepeat(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             while (arr[i] != i) {
-                if (arr[i] == arr[arr[i]])
+                if (arr[i] == arr[arr[i]]) {
                     return arr[i];
+                }
                 swap(arr, i, arr[i]);
             }
         }

@@ -16,6 +16,9 @@ public class 子集 {
      * <p>
      * 输入：nums = [1,2,3]
      * 输出：[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/c333d551eb6243e0b4d92e37a06fbfc9
      */
 
     private List<List<Integer>> res = new ArrayList<>();

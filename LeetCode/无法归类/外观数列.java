@@ -21,6 +21,10 @@ public class 外观数列 {
      * 描述前一项，这个数是 11 即 “ 二 个 1 ” ，记作 "21"
      * 描述前一项，这个数是 21 即 “ 一 个 2 + 一 个 1 ” ，记作 "1211"
      * 描述前一项，这个数是 1211 即 “ 一 个 1 + 一 个 2 + 二 个 1 ” ，记作 "111221"
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/count-and-say
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     public static void main(String[] args) {

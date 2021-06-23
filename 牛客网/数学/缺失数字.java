@@ -9,6 +9,9 @@ public class 缺失数字 {
     /**
      * 题目描述:
      * 从 0,1,2,...,n 这 n+1 个数中选择 n 个数，组成有序数组，请找出缺失的那个数，要求 O (n) 尽可能小。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/9ce534c8132b4e189fd3130519420cde
      */
 
     /**
@@ -38,8 +41,9 @@ public class 缺失数字 {
     public int _solve(int[] a) {
         int len = a.length;
         for (int i = 0; i < len; i++) {
-            if (i != a[i])
+            if (i != a[i]) {
                 return i;
+            }
         }
         return len;
     }

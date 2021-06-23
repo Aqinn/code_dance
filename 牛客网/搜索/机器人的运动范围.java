@@ -13,6 +13,9 @@ public class 机器人的运动范围 {
      * 但是不能进入行坐标和列坐标的数位之和大于k的格子。
      * 例如，当k为18时，机器人能够进入方格（35,37），因为3+5+3+7 = 18。
      * 但是，它不能进入方格（35,38），因为3+5+3+8 = 19。请问该机器人能够达到多少个格子？
+     *
+     * 来源：牛客
+     * 链接：
      */
 
     public static void main(String[] args) {
@@ -26,8 +29,9 @@ public class 机器人的运动范围 {
     }
 
     public int moving(int threshold, int rows, int cols, int r, int c, boolean[][] been) {
-        if (been[r][c] || r >= rows || c >= cols || splitAndSum(r) + splitAndSum(c) > threshold)
+        if (been[r][c] || r >= rows || c >= cols || splitAndSum(r) + splitAndSum(c) > threshold) {
             return 0;
+        }
         // 朝右
         int right = moving(threshold, rows, cols, r + 1, c, been);
         // 朝下

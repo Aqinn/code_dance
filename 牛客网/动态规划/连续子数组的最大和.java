@@ -21,6 +21,9 @@ public class 连续子数组的最大和 {
      * 18
      * <p>
      * 输入的数组为{1,-2,3,10,—4,7,2,一5}，和最大的子数组为{3,10,一4,7,2}，因此输出为该子数组的和 18。
+     *
+     * 来源：牛客
+     * 链接：
      */
 
     public static void main(String[] args) {
@@ -35,8 +38,9 @@ public class 连续子数组的最大和 {
         int max = dp[0];
         for (int i = 1; i < array.length; i++) {
             dp[i] = Math.max(array[i], array[i] + dp[i - 1]);
-            if (dp[i] > max)
+            if (dp[i] > max) {
                 max = dp[i];
+            }
         }
         return max;
     }

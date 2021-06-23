@@ -8,12 +8,17 @@ public class 完全二叉树节点数 {
 
     /**
      * 题目描述:
-     * 给定一棵完全二叉树的头节点head，返回这棵树的节点个数。如果完全二叉树的节点数为N，请实现时间复杂度低于O(N)的解法。
+     * 给定一棵完全二叉树的头节点head，返回这棵树的节点个数。
+     * 如果完全二叉树的节点数为N，请实现时间复杂度低于O(N)的解法。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/512688d2ecf54414826f52df4e4b5693
      */
 
     public int nodeNum(TreeNode head) {
-        if (head == null)
+        if (head == null) {
             return 0;
+        }
         int leftHeight = getHeight(head.left);
         int rightHeight = getHeight(head.right);
         if (leftHeight == rightHeight) {

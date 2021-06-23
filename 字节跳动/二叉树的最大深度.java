@@ -10,11 +10,15 @@ public class 二叉树的最大深度 {
      * 题目描述:
      * 求给定二叉树的最大深度，
      * 最大深度是指树的根结点到最远叶子结点的最长路径上结点的数量。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/8a2b2bf6c19b4f23a9bdb9b233eefa73
      */
 
     public int maxDepth(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return 0;
+        }
         return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
     }
 

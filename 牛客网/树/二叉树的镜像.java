@@ -24,11 +24,15 @@ public class 二叉树的镜像 {
      *     	  10   6
      *     	 / \  / \
      *     	11 9 7  5
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/a9d0ecbacef9410ca97463e4a5c83be7
      */
 
     public void Mirror(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return;
+        }
         TreeNode temp = root.left;
         root.left = root.right;
         root.right = temp;

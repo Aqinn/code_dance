@@ -11,6 +11,9 @@ public class 反转链表 {
     /**
      * 题目描述:
      * 输入一个链表，反转链表后，输出新链表的表头。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/75e878df47f24fdc9dc3e400ec6058ca
      */
 
     public static void main(String[] args) {

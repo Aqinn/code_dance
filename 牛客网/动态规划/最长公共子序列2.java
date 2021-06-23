@@ -4,11 +4,14 @@ package 牛客网.动态规划;
  * @Author Aqinn
  * @Date 2021/1/30 1:48 下午
  */
-public class 最长公共子序列 {
+public class 最长公共子序列2 {
 
     /**
      * 题目描述:
      * 给定两个字符串 str1 和 str2，输出连个字符串的最长公共子序列。如过最长公共子序列为空，则输出 - 1。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/6d29638c85bb4ffd80c020fe244baf11
      */
 
 
@@ -27,8 +30,9 @@ public class 最长公共子序列 {
                 }
             }
         }
-        if (dp[s1.length()][s2.length()] == 0)
+        if (dp[s1.length()][s2.length()] == 0) {
             return "-1";
+        }
         StringBuilder sb = new StringBuilder();
         int i=s1.length(), j=s2.length();
         while(i>0 && j>0){
@@ -37,10 +41,11 @@ public class 最长公共子序列 {
                 i--;
                 j--;
             } else {
-                if (dp[i][j-1] > dp[i-1][j])
+                if (dp[i][j-1] > dp[i-1][j]) {
                     j--;
-                else
+                } else {
                     i--;
+                }
             }
         }
         return sb.reverse().toString();

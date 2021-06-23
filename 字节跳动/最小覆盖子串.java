@@ -22,6 +22,9 @@ public class 最小覆盖子串 {
      * 注意：
      * 如果 SS 中没有包含 TT 中所有字符的子串，返回空字符串 “”；
      * 满足条件的子串可能有很多，但是题目保证满足条件的最短的子串唯一。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/c466d480d20c4c7c9d322d12ca7955ac
      */
 
     public static void main(String[] args) {
@@ -29,7 +32,7 @@ public class 最小覆盖子串 {
         System.out.println(main.minWindow("XDOYEZODEYXNZ", "XYZ"));
     }
 
-    public static String minWindow(String s, String t) {
+    public String minWindow(String s, String t) {
         if (s == null || s == "" || t == null || t == "" || s.length() < t.length()) {
             return "";
         }

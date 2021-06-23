@@ -10,6 +10,9 @@ public class 大数乘法 {
      * 题目描述:
      * 以字符串的形式读入两个数字，编写一个函数计算它们的乘积，以字符串形式返回。
      * （字符串长度不大于10000，保证字符串仅由'0'~'9'这10种字符组成）
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/c4c488d4d40d4c4e9824c3650f7d5571
      */
 
     /**
@@ -20,12 +23,15 @@ public class 大数乘法 {
      * @return string字符串
      */
     public String solve(String s, String t) {
-        if (s == null)
+        if (s == null) {
             return t;
-        if (t == null)
+        }
+        if (t == null) {
             return s;
-        if ("0".equals(s) || "0".equals(t))
+        }
+        if ("0".equals(s) || "0".equals(t)) {
             return "0";
+        }
         int[] s1 = new int[s.length()];
         int[] s2 = new int[t.length()];
         int len1 = s1.length, len2 = s2.length;

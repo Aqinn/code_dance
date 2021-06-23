@@ -12,6 +12,10 @@ class 移除K位数字 {
      * 注意:
      * num 的长度小于 10002 且 ≥ k。
      * num 不会包含任何前导零。
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/remove-k-digits
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     fun removeKdigits(num: String, k: Int): String {

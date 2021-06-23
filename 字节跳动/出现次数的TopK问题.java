@@ -23,6 +23,9 @@ public class 出现次数的TopK问题 {
      * ["1","2","3","4"],2
      * 示例输出:
      * [["1","1"],["2","1"]]
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/fd711bdfa0e840b381d7e1b82183b3ee
      */
 
     public static void main(String[] args) {
@@ -45,10 +48,11 @@ public class 出现次数的TopK问题 {
     public String[][] topKstrings(String[] strings, int k) {
         Map<String, Integer> counts = new HashMap<>();
         for (int i = 0; i < strings.length; i++) {
-            if (counts.containsKey(strings[i]))
+            if (counts.containsKey(strings[i])) {
                 counts.put(strings[i], counts.get(strings[i]) + 1);
-            else
+            } else {
                 counts.put(strings[i], 1);
+            }
         }
         Node[] arr = new Node[counts.size()];
         Iterator<Map.Entry<String, Integer>> iterator = counts.entrySet().iterator();
@@ -79,10 +83,12 @@ public class 出现次数的TopK问题 {
         Node temp = arr[root];
         int lChild = root * 2 + 1;
         while (lChild < length) {
-            if (lChild + 1 < length && !compare(arr[lChild+1], arr[lChild]))
+            if (lChild + 1 < length && !compare(arr[lChild+1], arr[lChild])) {
                 lChild++;
-            if (!compare(temp, arr[lChild]))
+            }
+            if (!compare(temp, arr[lChild])) {
                 break;
+            }
             arr[root] = arr[lChild];
             root = lChild;
             lChild = lChild * 2 + 1;
@@ -91,10 +97,11 @@ public class 出现次数的TopK问题 {
     }
 
     private boolean compare(Node n1, Node n2) {
-        if (n1.val != n2.val)
+        if (n1.val != n2.val) {
             return n1.val > n2.val;
-        else
+        } else {
             return stringCompare(n1.key, n2.key);
+        }
     }
 
     private boolean stringCompare(String s1, String s2) {

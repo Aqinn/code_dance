@@ -12,6 +12,9 @@ public class 字符串变形 {
      * 首先这个字符串中包含着一些空格，就像"Hello World"一样，
      * 然后我们要做的是把着个字符串中由空格隔开的单词反序，同时反转每个字符的大小写。
      * 比如"Hello World"变形后就变成了"wORLD hELLO"。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/c3120c1c1bc44ad986259c0cf0f0b80e
      */
 
     public static void main(String[] args) {
@@ -20,8 +23,9 @@ public class 字符串变形 {
     }
 
     public String trans(String s, int n) {
-        if (s == null)
+        if (s == null) {
             return "";
+        }
         char[] arr = s.toCharArray();
         revert(arr, 0, n - 1);
         int i = 0, j = 0;
@@ -52,8 +56,9 @@ public class 字符串变形 {
     }
 
     private void swapAndSwitch(char[] arr, int i, int j) {
-        if (i == j)
+        if (i == j) {
             return;
+        }
         char ch = arr[i];
         arr[i] = arr[j];
         arr[j] = ch;

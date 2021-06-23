@@ -14,14 +14,18 @@ public class 在两个长度相等的排序数组中找到上中位数 {
      * [要求]
      * 时间复杂度为O(logN)，额外空间复杂度为O(1)
      *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/6fbe70f3a51d44fa9395cfc49694404f
+     *
      * 参考题解:
      * https://www.cnblogs.com/kubidemanong/p/10562292.html
      */
 
     // 递归版本
     public static int getUpMedian(int[] arr1, int[] arr2) {
-        if (arr1 == null || arr2 == null)
+        if (arr1 == null || arr2 == null) {
             return -1;
+        }
         // 开始寻找
         return find(arr1, 0, arr1.length - 1, arr2, 0, arr2.length - 1);
     }
@@ -45,8 +49,9 @@ public class 在两个长度相等的排序数组中找到上中位数 {
 
     // 迭代版本
     public int findMedianinTwoSortedAray(int[] arr1, int[] arr2) {
-        if (arr1 == null || arr2 == null)
+        if (arr1 == null || arr2 == null) {
             return -1;
+        }
         int l1 = 0, r1 = arr1.length - 1;
         int l2 = 0, r2 = arr2.length - 1;
         int mid1 = 0, mid2 = 0;
@@ -76,14 +81,19 @@ public class 在两个长度相等的排序数组中找到上中位数 {
     public int _findMedianinTwoSortedAray(int[] a1, int l1, int r1, int[] a2, int l2, int r2, int k) {
         int m = r1 - l1 + 1;
         int n = r2 - l2 + 1;
-        if (m == 0) return a2[l2 + k - 1];
-        if (k == 1) return Math.min(a1[l1], a2[l2]);
+        if (m == 0) {
+            return a2[l2 + k - 1];
+        }
+        if (k == 1) {
+            return Math.min(a1[l1], a2[l2]);
+        }
         int i1 = l1 + Math.min(m, k / 2) - 1;
         int i2 = l2 + Math.min(n, k / 2) - 1;
-        if (a1[i1] > a2[i2])
+        if (a1[i1] > a2[i2]) {
             return _findMedianinTwoSortedAray(a1, l1, r1, a2, i2 + 1, r2, k - (i2 - l2) - 1);
-        else
+        } else {
             return _findMedianinTwoSortedAray(a1, l1 + 1, r1, a2, l2, r2, k - (i1 - l1) - 1);
+        }
     }
 
 }

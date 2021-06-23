@@ -11,6 +11,9 @@ public class 二叉树根节点到叶子节点和为指定值的路径 {
     /**
      * 题目描述:
      * 给定一个二叉树和一个值 sum，请找出所有的根节点到叶子节点的节点值之和等于 sum 的路径，
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/840dd2dc4fbd4b2199cd48f2dadf930a
      */
 
     /**
@@ -20,8 +23,9 @@ public class 二叉树根节点到叶子节点和为指定值的路径 {
      */
     public ArrayList<ArrayList<Integer>> pathSum(TreeNode root, int sum) {
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
-        if (root == null)
+        if (root == null) {
             return res;
+        }
         dfs(root, sum, res);
         return res;
     }
@@ -30,8 +34,9 @@ public class 二叉树根节点到叶子节点和为指定值的路径 {
     private ArrayList<Integer> temp = new ArrayList<>();
 
     private void dfs(TreeNode node, int target, ArrayList<ArrayList<Integer>> res) {
-        if (node == null)
+        if (node == null) {
             return;
+        }
         temp.add(node.val);
         tempSum += node.val;
         if (node.left == null && node.right == null) {

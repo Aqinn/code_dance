@@ -10,6 +10,10 @@ class 分割等和子集 {
      * 题目描述:
      * 给你一个只包含正整数 的 非空 数组 nums 。
      * 请你判断是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/partition-equal-subset-sum
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     fun canPartition(nums: IntArray): Boolean {

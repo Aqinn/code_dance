@@ -12,6 +12,9 @@ public class 链表中环的入口结点 {
     /**
      * 题目描述:
      * 给一个链表，若其中包含环，请找出该链表的环的入口结点，否则，输出null。要求不能使用额外的空间。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/253d2c59ec3e4bc68da16833f79a38e4
      */
 
     public static void main(String[] args) {
@@ -28,16 +31,18 @@ public class 链表中环的入口结点 {
     }
 
     public ListNode EntryNodeOfLoop(ListNode pHead) {
-        if (pHead == null)
+        if (pHead == null) {
             return null;
+        }
         // 检测有没有环
         ListNode slow = pHead;
         ListNode fast = pHead;
         while (slow != null && fast != null) {
             slow = slow.next;
             fast = fast.next;
-            if (fast == null)
+            if (fast == null) {
                 return null;
+            }
             fast = fast.next;
             if (slow == fast && slow != null) {
                 break;
@@ -46,8 +51,9 @@ public class 链表中环的入口结点 {
         // 有环，相遇在 fast
         slow = pHead;
         while (slow != null) {
-            if (slow == fast)
+            if (slow == fast) {
                 return slow;
+            }
             slow = slow.next;
             fast = fast.next;
         }

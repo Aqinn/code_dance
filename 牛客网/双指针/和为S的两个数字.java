@@ -13,6 +13,9 @@ public class 和为S的两个数字 {
     /**
      * 题目描述:
      * 在有序数组中找出两个数，使得和为给定的数 S。如果有多对数字的和等于 S，输出两个数的乘积最小的。
+     *
+     * 来源：牛客
+     * 链接：
      */
 
     public static void main(String[] args) {

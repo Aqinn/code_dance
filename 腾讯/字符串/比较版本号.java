@@ -9,7 +9,11 @@ public class 比较版本号 {
     /**
      * 题目描述:
      * 如果version1 > version2 返回1，如果 version1 < version2 返回-1，不然返回0.
-     * 输入的version字符串非空，只包含数字和字符.。.字符不代表通常意义上的小数点，只是用来区分数字序列。例如字符串2.5并不代表二点五，只是代表版本是第一级版本号是2，第二级版本号是5.
+     * 输入的version字符串非空，只包含数字和字符.。.字符不代表通常意义上的小数点，只是用来区分数字序列。
+     * 例如字符串2.5并不代表二点五，只是代表版本是第一级版本号是2，第二级版本号是5.
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/2b317e02f14247a49ffdbdba315459e7
      */
 
     public int compare(String version1, String version2) {

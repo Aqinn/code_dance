@@ -9,11 +9,15 @@ public class 数组中的最长连续子序列 {
     /**
      * 题目描述:
      * 给定无序数组 arr，返回其中最长的连续序列的长度 (要求值连续，位置可以不连续，例如 3,4,5,6 为连续的自然数）
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/eac1c953170243338f941959146ac4bf
      */
 
     public int MLS(int[] arr) {
-        if (arr == null || arr.length == 0)
+        if (arr == null || arr.length == 0) {
             return 0;
+        }
         heapSort(arr);
         int i = 0, len = arr.length;
         int temp = 1;
@@ -33,8 +37,9 @@ public class 数组中的最长连续子序列 {
     }
 
     private void heapSort(int[] arr) {
-        if (arr == null || arr.length == 0)
+        if (arr == null || arr.length == 0) {
             return;
+        }
         int len = arr.length;
         for (int i = (len - 1) / 2; i >= 0; i--) {
             adjust(arr, i, len);
@@ -52,10 +57,12 @@ public class 数组中的最长连续子序列 {
         int lChild = root * 2 + 1;
         while (lChild < len) {
             // 左右孩子比大小
-            if (lChild + 1 < len && arr[lChild] < arr[lChild + 1])
+            if (lChild + 1 < len && arr[lChild] < arr[lChild + 1]) {
                 lChild++;
-            if (temp >= arr[lChild])
+            }
+            if (temp >= arr[lChild]) {
                 break;
+            }
             arr[root] = arr[lChild];
             root = lChild;
             lChild = lChild * 2 + 1;

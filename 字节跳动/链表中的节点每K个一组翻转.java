@@ -12,6 +12,9 @@ public class 链表中的节点每K个一组翻转 {
      * 如果链表中的节点数不是 k 的倍数，将最后剩下的节点保持原样
      * 你不能更改节点中的值，只能更改节点本身。
      * 要求空间复杂度 O(1)
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/b49c3dc907814e9bbfa8437c251b028e
      */
 
     public static void main(String[] args) {
@@ -41,11 +44,13 @@ public class 链表中的节点每K个一组翻转 {
                 count++;
                 subTail = head;
                 head = head.next;
-                if (count == k)
+                if (count == k) {
                     break;
+                }
             }
-            if (count != k)
+            if (count != k) {
                 break;
+            }
             // 翻转
             // head 是剩下子表的表头
             ListNode cur = subHeadPre.next;

@@ -17,6 +17,9 @@ public class 旋转数组的最小数字 {
      * <p>
      * 输出
      * 1
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/9f3231a991af4f55b95579b44b7a01ba
      */
 
     public static void main(String[] args) {

@@ -11,6 +11,9 @@ public class 链表中倒数第K个结点 {
     /**
      * 题目描述:
      * 输入一个链表，输出该链表中倒数第k个结点。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/886370fe658f41b498d40fb34ae76ff9
      */
 
     public static void main(String[] args) {
@@ -27,16 +30,18 @@ public class 链表中倒数第K个结点 {
     }
 
     public ListNode FindKthToTail(ListNode head, int k) {
-        if (head == null)
+        if (head == null) {
             return null;
+        }
         ListNode temp = head;
         int size = 1;
         while (temp.next != null) {
             temp = temp.next;
             size++;
         }
-        if (k > size)
+        if (k > size) {
             return null;
+        }
         temp = head;
         while (size != k) {
             temp = temp.next;

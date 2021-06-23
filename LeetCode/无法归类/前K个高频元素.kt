@@ -11,6 +11,10 @@ class 前K个高频元素 {
     /**
      * 题目描述:
      * 给你一个整数数组 nums 和一个整数 k ，请你返回其中出现频率前 k 高的元素。你可以按 任意顺序 返回答案。
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/top-k-frequent-elements
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     fun topKFrequent(nums: IntArray, k: Int): IntArray {

@@ -12,6 +12,9 @@ public class 括号序列 {
      * 题目描述:
      * 给出一个仅包含字符'(',')','{','}','['和']',的字符串，判断给出的字符串是否是合法的括号序列
      * 括号必须以正确的顺序关闭，"()"和"()[]{}"都是合法的括号序列，但"(]"和"([)]"不合法。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/37548e94a270412c8b9fb85643c8ccc2
      */
 
     /**
@@ -25,8 +28,9 @@ public class 括号序列 {
             if (c == '(' || c == '[' || c == '{') {
                 stack.push(c);
             } else {
-                if (stack.size() == 0)
+                if (stack.size() == 0) {
                     return false;
+                }
                 Character cc = stack.pop();
                 if (c == ')' && !cc.equals('(')) {
                     return false;

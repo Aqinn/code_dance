@@ -11,6 +11,9 @@ public class 股票无限次交易 {
      * 假定你知道某只股票每一天价格的变动。
      * 你最多可以同时持有一只股票。但你可以无限次的交易（买进和卖出均无手续费）。
      * 请设计一个函数，计算你所能获得的最大收益。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/9e5e3c2603064829b0a0bbfca10594e9
      */
 
     /**
@@ -22,8 +25,9 @@ public class 股票无限次交易 {
 
     public int maxProfit(int[] prices) {
         int len;
-        if (prices == null || (len = prices.length) == 0)
+        if (prices == null || (len = prices.length) == 0) {
             return 0;
+        }
         int sum = 0;
         for (int i = 1; i < len; i++) {
             int temp = prices[i] - prices[i - 1];

@@ -10,6 +10,9 @@ public class 最小编辑代价 {
      * 题目描述:
      * 给定两个字符串 str1 和 str2，再给定三个整数 ic，dc 和 rc，分别代表插入、删除和替换一个字符的代价，
      * 请输出将 str1 编辑成 str2 的最小代价。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/05fed41805ae4394ab6607d0d745c8e4
      */
 
     /**
@@ -26,10 +29,12 @@ public class 最小编辑代价 {
         int m = str1.length();
         int n = str2.length();
         int[][] dp = new int[m + 1][n + 1];
-        for (int i = 0; i <= m; i++)
+        for (int i = 0; i <= m; i++) {
             dp[i][0] = i * dc;
-        for (int i = 0; i <= n; i++)
+        }
+        for (int i = 0; i <= n; i++) {
             dp[0][i] = i * ic;
+        }
         for (int i = 1; i <= m; i++) {
             for (int j = 1; j <= n; j++) {
                 if (str1.charAt(i - 1) == str2.charAt(j - 1)) {

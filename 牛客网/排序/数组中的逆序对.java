@@ -12,6 +12,9 @@ public class 数组中的逆序对 {
      * 题目描述:
      * 在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。
      * 输入一个数组,求出这个数组中的逆序对的总数P。并将P对1000000007取模的结果输出。 即输出P%1000000007
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/96bd6684e04a44eb80e6a68efc0ec6c5
      */
 
     public static void main(String[] args) {
@@ -26,13 +29,17 @@ public class 数组中的逆序对 {
     private static final int MOD = 1000000007;
 
     public int InversePairs(int[] array) {
-        if (array == null) return 0;
+        if (array == null) {
+            return 0;
+        }
         int[] temp = new int[array.length];
         return mergeSort(array, 0, array.length - 1, temp);
     }
 
     private int mergeSort(int[] array, int low, int high, int[] temp) {
-        if (low >= high) return 0;
+        if (low >= high) {
+            return 0;
+        }
         int res = 0, mid = (low + high) >> 1;
         res += mergeSort(array, low, mid, temp);
         res %= MOD;

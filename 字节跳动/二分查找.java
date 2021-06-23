@@ -10,6 +10,9 @@ public class 二分查找 {
      * 题目描述:
      * 请实现有重复数字的升序数组的二分查找。
      * 输出在数组中第一个大于等于查找值的位置，如果数组中不存在这样的数，则输出数组长度加一。
+     *
+     * 来源：牛客
+     * 链接：
      */
 
     public static void main(String[] args) {
@@ -26,8 +29,9 @@ public class 二分查找 {
      * @return int整型
      */
     public int upper_bound_(int n, int v, int[] a) {
-        if (v > a[n - 1])
+        if (v > a[n - 1]) {
             return n + 1;
+        }
         int l = 0, r = n - 1;
         while (l < r) {
             int mid = (l + r) >> 1;

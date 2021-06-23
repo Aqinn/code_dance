@@ -11,6 +11,9 @@ public class 子数组最大乘积 {
     /**
      * 题目描述:
      * 给定一个double类型的数组arr，其中的元素可正可负可0，返回子数组累乘的最大乘积。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/9c158345c867466293fc413cff570356
      */
 
     public static void main(String[] args) {
@@ -42,8 +45,9 @@ public class 子数组最大乘积 {
 
     public double _maxProduct(double[] arr) {
         int len;
-        if (arr == null || (len = arr.length) == 0)
+        if (arr == null || (len = arr.length) == 0) {
             return 0;
+        }
         double[] dp = new double[len];  // 以数组内下标为 i 的位置结尾的子数组最大乘积
         dp[0] = arr[0];
         double max = dp[0];

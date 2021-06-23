@@ -10,6 +10,9 @@ public class 矩阵元素查找 {
      * 题目描述:
      * 已知 int 一个有序矩阵 mat，同时给定矩阵的大小 n 和 m 以及需要查找的元素 x，且矩阵的行和列都是从小到大有序的。
      * 设计查找算法返回所查找元素的二元数组，代表该元素的行号和列号 (均从零开始)。保证元素互异。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/3afe6fabdb2c46ed98f06cfd9a20f2ce
      */
 
     public int[] findElement(int[][] mat, int n, int m, int x) {

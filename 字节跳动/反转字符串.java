@@ -7,16 +7,20 @@ package 字节跳动;
 public class 反转字符串 {
 
     /**
+     * 题目描述:
      * 反转字符串
      *
-     * @param str string字符串
-     * @return string字符串
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/c3a6afee325e472386a1c4eb1ef987f3
      */
+
     public String solve(String str) {
-        if (str == null)
+        if (str == null) {
             return null;
-        if ("".equals(str))
+        }
+        if ("".equals(str)) {
             return "";
+        }
         int i = 0, j = str.length() - 1;
         char[] arr = str.toCharArray();
         while (i < j) {

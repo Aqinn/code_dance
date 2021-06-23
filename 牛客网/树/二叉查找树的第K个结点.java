@@ -11,6 +11,9 @@ public class 二叉查找树的第K个结点 {
     /**
      * 题目描述:
      * 给定一棵二叉搜索树，请找出其中的第k小的结点。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/ef068f602dde4d28aab2b210e859150a
      */
 
     private int count = 0;
@@ -22,8 +25,9 @@ public class 二叉查找树的第K个结点 {
     }
 
     private void middle(TreeNode pRoot, int k) {
-        if (pRoot == null)
+        if (pRoot == null) {
             return;
+        }
         middle(pRoot.left, k);
         count++;
         if (count == k) {

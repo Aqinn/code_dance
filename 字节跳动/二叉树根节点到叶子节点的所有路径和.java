@@ -11,6 +11,9 @@ public class 二叉树根节点到叶子节点的所有路径和 {
      * 给定一个仅包含数字 0−9 的二叉树，每一条从根节点到叶子节点的路径都可以用一个数字表示。
      * 例如根节点到叶子节点的一条路径是 1 → 2 → 3, 那么这条路径就用 123 来代替。
      * 找出根节点到叶子节点的所有路径表示的数字之和。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/185a87cd29eb42049132aed873273e83
      */
 
     /**
@@ -24,8 +27,9 @@ public class 二叉树根节点到叶子节点的所有路径和 {
     }
 
     private void getSum(TreeNode root, TreeNode node, int s) {
-        if (node == null)
+        if (node == null) {
             return;
+        }
         s = s * 10 + node.val;
         if (node.left == null && node.right == null) {
             sum += s;

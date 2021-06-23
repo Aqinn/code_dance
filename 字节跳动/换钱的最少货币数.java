@@ -13,12 +13,16 @@ public class 换钱的最少货币数 {
      * <p>
      * 【要求】
      * 时间复杂度O(n×aim)，空间复杂度 O(n)。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/3911a20b3f8743058214ceaa099eeb45
      */
 
     public static int minMoney(int[] arr, int aim) {
         int[] dp = new int[aim + 1];
-        for (int i = 0; i < aim + 1; i++)
+        for (int i = 0; i < aim + 1; i++) {
             dp[i] = aim + 1;
+        }
         //初始化数组
         dp[0] = 0;
         for (int i = 1; i <= aim; i++) {

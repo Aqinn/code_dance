@@ -17,6 +17,9 @@ public class 把数组排成最小的数 {
      * <p>
      * 输出
      * "321323"
+     *
+     * 来源：牛客
+     * 链接：
      */
 
     public static void main(String[] args) {

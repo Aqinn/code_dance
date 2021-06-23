@@ -13,6 +13,9 @@ public class 删除链表中重复的节点 {
      * 删除链表中重复的节点
      * 在一个排序的链表中，存在重复的结点，请删除该链表中重复的结点，重复的结点不保留，返回链表头指针。
      * 例如，链表1->2->3->3->4->4->5 处理后为 1->2->5
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/71cef9f8b5564579bf7ed93fbe0b2024
      */
 
     public static class ListNode {
@@ -55,12 +58,14 @@ public class 删除链表中重复的节点 {
 
     // 递归
     public ListNode _deleteDuplication(ListNode pHead) {
-        if (pHead == null || pHead.next == null)
+        if (pHead == null || pHead.next == null) {
             return pHead;
+        }
         ListNode next = pHead.next;
         if (pHead.val == next.val) {
-            while (next != null && pHead.val == next.val)
+            while (next != null && pHead.val == next.val) {
                 next = next.next;
+            }
             return deleteDuplication(next);
         } else {
             pHead.next = deleteDuplication(pHead.next);
@@ -99,8 +104,9 @@ public class 删除链表中重复的节点 {
 
     public ListNode deleteDuplication(ListNode pHead)
     {
-        if (pHead == null)
+        if (pHead == null) {
             return null;
+        }
         ListNode root = new ListNode(-1);
         root.next = pHead;
         ListNode pre = root;

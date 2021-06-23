@@ -18,14 +18,20 @@ public class 有效的字母异位词 {
      * <p>
      * 输入: s = "rat", t = "car"
      * 输出: false
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/valid-anagram
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     public boolean isAnagram(String s, String t) {
-        if (s == null || t == null)
+        if (s == null || t == null) {
             return false;
+        }
         int l1 = s.length(), l2 = t.length();
-        if (l1 != l2)
+        if (l1 != l2) {
             return false;
+        }
         int[] memo = new int[26];
         for (int i = 0; i < l1; i++) {
             char ch = s.charAt(i);
@@ -34,8 +40,9 @@ public class 有效的字母异位词 {
         for (int i = 0; i < l2; i++) {
             char ch = t.charAt(i);
             memo[ch - 'a']--;
-            if (memo[ch - 'a'] < 0)
+            if (memo[ch - 'a'] < 0) {
                 return false;
+            }
         }
         return true;
     }

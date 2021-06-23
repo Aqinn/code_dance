@@ -12,16 +12,22 @@ public class 移动零 {
      * <p>
      * 输入: [0,1,0,3,12]
      * 输出: [1,3,12,0,0]
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/move-zeroes
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     public void moveZeroes(int[] nums) {
         int len;
-        if (nums == null || (len = nums.length) == 0)
+        if (nums == null || (len = nums.length) == 0) {
             return;
+        }
         int i = 0, j = 0;
         while (j < len) {
-            while (j < len && nums[j] == 0)
+            while (j < len && nums[j] == 0) {
                 j++;
+            }
             if (j < len) {
                 nums[i] = nums[j];
                 i++;

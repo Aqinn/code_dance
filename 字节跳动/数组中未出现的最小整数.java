@@ -13,6 +13,9 @@ public class 数组中未出现的最小整数 {
      * arr = [1, 2, 3, 4]。返回 5
      *
      * 进阶：你可以实现时间复杂度为 O(n) 并且只使用常数级别额外空间的解决方案吗？
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/8cc4f31432724b1f88201f7b721aa391
      */
 
     /**
@@ -38,8 +41,9 @@ public class 数组中未出现的最小整数 {
     public int firstMissingPositive(int[] nums) {
         int len = nums.length;
         for(int i=0; i<len; i++){
-            if(nums[i] <= 0)
+            if(nums[i] <= 0) {
                 nums[i] = len+1;
+            }
         }
         for(int i=0; i<len; i++){
             int abs = Math.abs(nums[i]);
@@ -63,8 +67,9 @@ public class 数组中未出现的最小整数 {
      */
     public int minNumberdisappered(int[] arr) {
         int len = arr.length;
-        for (int i = (len - 1) / 2; i >= 0; i--)
+        for (int i = (len - 1) / 2; i >= 0; i--) {
             adjust(arr, i, len);
+        }
         for (int i = len - 1; i >= 0; i--) {
             int temp = arr[i];
             arr[i] = arr[0];
@@ -77,8 +82,9 @@ public class 数组中未出现的最小整数 {
                 res++;
                 continue;
             }
-            if (arr[i] > 0 && res < arr[i])
+            if (arr[i] > 0 && res < arr[i]) {
                 return res;
+            }
         }
         return res;
     }
@@ -87,10 +93,12 @@ public class 数组中未出现的最小整数 {
         int tmp = arr[root];
         int lChild = root * 2 + 1;
         while (lChild < length) {
-            if (lChild + 1 < length && arr[lChild] < arr[lChild + 1])
+            if (lChild + 1 < length && arr[lChild] < arr[lChild + 1]) {
                 lChild++;
-            if (tmp >= arr[lChild])
+            }
+            if (tmp >= arr[lChild]) {
                 break;
+            }
             arr[root] = arr[lChild];
             root = lChild;
             lChild = lChild * 2 + 1;

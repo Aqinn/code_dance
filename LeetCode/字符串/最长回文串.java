@@ -19,6 +19,10 @@ public class 最长回文串 {
      * <p>
      * 解释:
      * 我们可以构造的最长的回文串是"dccaccd", 它的长度是 7。
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/longest-palindrome
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     /**

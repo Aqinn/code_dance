@@ -14,6 +14,9 @@ public class 括号生成 {
      * 给出 n 对括号，请编写一个函数来生成所有的由 n 对括号组成的合法组合。
      * 例如，给出 n=3，解集为：
      * "((()))", "(()())", "(())()", "()()()", "()(())",
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/c9addb265cdf4cdd92c092c655d164ca
      */
 
     // 按题目顺序输出
@@ -44,8 +47,9 @@ public class 括号生成 {
     }
     private void gen(String cur, int idx, int count, ArrayList<String> res){
         if(count == 0){
-            if(!res.contains(cur))
+            if(!res.contains(cur)) {
                 res.add(cur);
+            }
             return ;
         }
         gen(

@@ -11,11 +11,15 @@ public class 链表排序 {
     /**
      * 题目描述:
      * 给定一个无序单链表，实现单链表的排序(按升序排序)。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/f23604257af94d939848729b1a5cda08
      */
 
     public ListNode sortInList(ListNode head) {
-        if (head == null || head.next == null)
+        if (head == null || head.next == null) {
             return head;
+        }
         ListNode slow = head, fast = head;
         // 找到中点
         while (fast.next != null && fast.next.next != null) {
@@ -44,8 +48,9 @@ public class 链表排序 {
 
 
     public ListNode arraylist_sortInList(ListNode head) {
-        if (head == null || head.next == null)
+        if (head == null || head.next == null) {
             return head;
+        }
         ArrayList<Integer> list = new ArrayList<>();
         ListNode cur = head;
         while (cur != null) {
@@ -77,8 +82,9 @@ public class 链表排序 {
             cur = head;
             int count = size--;
             while (cur != null && count-- > 0) {
-                if (cur.next != null && cur.val > cur.next.val)
+                if (cur.next != null && cur.val > cur.next.val) {
                     swap(cur, cur.next);
+                }
                 cur = cur.next;
             }
         }

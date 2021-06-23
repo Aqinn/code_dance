@@ -10,11 +10,15 @@ public class 最长回文子串 {
      * 题目描述:
      * 对于一个字符串，请设计一个高效算法，计算其中最长回文子串的长度。
      * 给定字符串A以及它的长度n，请返回最长回文子串的长度。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/b4525d1d84934cf280439aeecc36f4af
      */
 
     public int getLongestPalindrome(String A, int n) {
-        if (A == null || n <= 0)
+        if (A == null || n <= 0) {
             return 0;
+        }
         boolean[][] dp = new boolean[n][n];
         int maxLen = 1;
         for (int i = 0; i < n; i++) {

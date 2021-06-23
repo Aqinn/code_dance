@@ -11,6 +11,9 @@ public class 包含min函数的栈 {
     /**
      * 题目描述:
      * 实现一个包含 min() 函数的栈，该方法返回当前栈中最小的值。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/c623426af02d4c189f92f2a99647bd34
      */
 
     private static Stack<Integer> data = new Stack<>();

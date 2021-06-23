@@ -15,6 +15,9 @@ public class 分数到小数 {
      * 如果小数部分为循环小数，则将循环的部分括在括号内。
      * 如果存在多个答案，只需返回 任意一个 。
      * 对于所有给定的输入，保证 答案字符串的长度小于 104 。
+     *
+     * 来源：牛客
+     * 链接：
      */
 
     public static void main(String[] args) {
@@ -26,17 +29,20 @@ public class 分数到小数 {
     }
 
     public String fractionToDecimal(int numerator, int denominator) {
-        if (numerator == 0)
+        if (numerator == 0) {
             return "0";
+        }
         StringBuilder sb = new StringBuilder();
-        if (numerator < 0 || denominator < 0)
+        if (numerator < 0 || denominator < 0) {
             sb.append("-");
+        }
         long dividend = Math.abs(Long.valueOf(numerator));
         long divisor = Math.abs(Long.valueOf(denominator));
         sb.append(String.valueOf(dividend / divisor));
         long remainder = dividend % divisor;
-        if (remainder == 0)
+        if (remainder == 0) {
             return sb.toString();
+        }
         sb.append(".");
         Map<Long, Integer> map = new HashMap<>();
         while (remainder != 0){

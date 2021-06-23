@@ -15,6 +15,9 @@ public class 替换空格 {
      * <p>
      * Output:
      * "A%20B"
+     *
+     * 来源：牛客
+     * 链接：
      */
 
     public static void main(String[] args) {
@@ -26,8 +29,9 @@ public class 替换空格 {
         StringBuffer sb = new StringBuffer(str);
         int p1 = sb.length() - 1;
         for (int i = 0; i <= p1; i++) {
-            if (sb.charAt(i) == ' ')
+            if (sb.charAt(i) == ' ') {
                 sb.append("  ");
+            }
         }
         int p2 = sb.length() - 1;
         while (p1 < p2 && p1 >= 0) {

@@ -11,6 +11,10 @@ public class 仅含1的子串数 {
      * 给你一个二进制字符串 s（仅由 '0' 和 '1' 组成的字符串）。
      * 返回所有字符都为 1 的子字符串的数目。
      * 由于答案可能很大，请你将它对 10^9 + 7 取模后返回。
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/number-of-substrings-with-only-1s
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     public static void main(String[] args) {

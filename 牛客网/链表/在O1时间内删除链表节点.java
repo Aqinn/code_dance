@@ -11,6 +11,9 @@ public class 在O1时间内删除链表节点 {
     /**
      * 题目描述:
      * 在O(1)时间内删除链表节点
+     *
+     * 来源：牛客
+     * 链接：
      */
 
     public static class ListNode {

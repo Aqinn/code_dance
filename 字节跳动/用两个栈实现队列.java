@@ -11,6 +11,9 @@ public class 用两个栈实现队列 {
     /**
      * 题目描述:
      * 用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6
      */
 
     Stack<Integer> stack1 = new Stack<Integer>();

@@ -11,6 +11,9 @@ public class 合并两个排序的链表 {
     /**
      * 题目描述:
      * 输入两个单调递增的链表，输出两个链表合成后的链表，当然我们需要合成后的链表满足单调不减规则。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/a479a3f0c4554867b35356e0d57cf03d
      */
 
     public static void main(String[] args) {
@@ -28,12 +31,15 @@ public class 合并两个排序的链表 {
     }
 
     public ListNode _Merge(ListNode list1, ListNode list2) {
-        if (list1 == null && list2 == null)
+        if (list1 == null && list2 == null) {
             return null;
-        if (list1 == null)
+        }
+        if (list1 == null) {
             return list2;
-        if (list2 == null)
+        }
+        if (list2 == null) {
             return list1;
+        }
         ListNode root = new ListNode(-1);
         ListNode cur = root;
         while (list1 != null && list2 != null) {
@@ -46,10 +52,13 @@ public class 合并两个排序的链表 {
             }
             cur = cur.next;
         }
-        if (list1 != null)
+        if (list1 != null) {
             cur.next = list1;
-        if (list2 != null)
-            cur.next = list2;
+        }
+        if (list2 == null) {
+            return root.next;
+        }
+        cur.next = list2;
         return root.next;
     }
 
@@ -66,8 +75,12 @@ public class 合并两个排序的链表 {
             }
             cur = cur.next;
         }
-        if(list1!=null) cur.next = list1;
-        if(list2!=null) cur.next = list2;
+        if(list1!=null) {
+            cur.next = list1;
+        }
+        if(list2!=null) {
+            cur.next = list2;
+        }
         return h.next;
     }
 

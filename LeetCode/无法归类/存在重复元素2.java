@@ -17,6 +17,10 @@ public class 存在重复元素2 {
      * <p>
      * 输入: nums = [1,2,3,1,2,3], k = 2
      * 输出: false
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/contains-duplicate-ii
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      **/
 
     public boolean containsNearbyDuplicate(int[] nums, int k) {
@@ -26,8 +30,9 @@ public class 存在重复元素2 {
                 return true;
             }
             set.add(nums[i]);
-            if (i - k >= 0)
+            if (i - k >= 0) {
                 set.remove(nums[i - k]);
+            }
         }
         return false;
     }

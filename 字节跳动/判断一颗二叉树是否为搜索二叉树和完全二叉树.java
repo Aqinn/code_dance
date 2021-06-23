@@ -12,6 +12,9 @@ public class 判断一颗二叉树是否为搜索二叉树和完全二叉树 {
     /**
      * 题目描述:
      * 给定一棵二叉树，已经其中没有重复值的节点，请判断该二叉树是否为搜索二叉树和完全二叉树。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/f31fc6d3caf24e7f8b4deb5cd9b5fa97
      */
 
     public boolean[] judgeIt(TreeNode root) {
@@ -22,10 +25,12 @@ public class 判断一颗二叉树是否为搜索二叉树和完全二叉树 {
     }
 
     private boolean judgeSearchBinTree(TreeNode root, int min, int max) {
-        if (root == null)
+        if (root == null) {
             return true;
-        if (root.val <= min || root.val >= max)
+        }
+        if (root.val <= min || root.val >= max) {
             return false;
+        }
         return judgeSearchBinTree(root.left, min, root.val) &&
                 judgeSearchBinTree(root.right, root.val, max);
     }

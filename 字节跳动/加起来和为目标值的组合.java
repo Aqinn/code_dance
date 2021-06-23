@@ -18,13 +18,17 @@ public class 加起来和为目标值的组合 {
      * 组合中的数字要按非递增排序
      * 结果中不能包含重复的组合
      * 组合之间的排序按照索引从小到大依次比较，小的排在前面，如果索引相同的情况下数值相同，则比较下一个索引。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/75e6cd5b85ab41c6a7c43359a74e869a
      */
 
     public ArrayList<ArrayList<Integer>> combinationSum2(int[] num, int target) {
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
         ArrayList<Integer> temp = new ArrayList<>();
-        if (num == null || num.length == 0 || target < 0)
+        if (num == null || num.length == 0 || target < 0) {
             return res;
+        }
         Arrays.sort(num);
         dfs(num, target, res, temp, 0);
         return res;
@@ -35,9 +39,13 @@ public class 加起来和为目标值的组合 {
             res.add(new ArrayList<Integer>(temp));
             return;
         }
-        if (start >= num.length) return;
+        if (start >= num.length) {
+            return;
+        }
         for (int i = start; i < num.length; i++) {
-            if (i > start && num[i] == num[i - 1]) continue;
+            if (i > start && num[i] == num[i - 1]) {
+                continue;
+            }
             if (num[i] <= target) {
                 temp.add(num[i]);
                 dfs(num, target - num[i], res, temp, i + 1);

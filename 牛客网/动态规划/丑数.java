@@ -12,6 +12,9 @@ public class 丑数 {
      * 题目描述:
      * 把只包含质因子2、3和5的数称作丑数（Ugly Number）。
      * 例如6、8都是丑数，但14不是，因为它包含质因子7。 习惯上我们把1当做是第一个丑数。求按从小到大的顺序的第N个丑数。
+     *
+     * 来源：牛客
+     * 链接：https://www.nowcoder.com/practice/6aa9e04fc3794f68acf8778237ba065b
      */
 
     public static void main(String[] args) {
@@ -20,8 +23,9 @@ public class 丑数 {
     }
 
     public int GetUglyNumber_Solution(int index) {
-        if (index <= 6)
+        if (index <= 6) {
             return index;
+        }
         int two = 1, three = 1, five = 1;
         int[] dp = new int[index + 1];
         // dp[i] 代表第N个丑数
@@ -37,12 +41,15 @@ public class 丑数 {
             int mulFive = 5 * dp[five];
             int res = Math.min(mulTwo, Math.min(mulThree, mulFive));
             dp[i] = res;
-            if (res == mulTwo)
+            if (res == mulTwo) {
                 two++;
-            if (res == mulThree)
+            }
+            if (res == mulThree) {
                 three++;
-            if (res == mulFive)
+            }
+            if (res == mulFive) {
                 five++;
+            }
         }
         return dp[index];
     }

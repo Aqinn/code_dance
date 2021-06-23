@@ -14,6 +14,10 @@ class 从英文中重建数字 {
      * 输入只包含小写英文字母。
      * 输入保证合法并可以转换为原始的数字，这意味着像 "abc" 或 "zerone" 的输入是不允许的。
      * 输入字符串的长度小于 50,000。
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode-cn.com/problems/reconstruct-original-digits-from-english
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     fun originalDigits(s: String): String {
